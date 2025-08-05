@@ -237,6 +237,11 @@ p {
   margin-bottom: 0;
 }
 
+.copyright a {
+  color: lightblue;
+  text-decoration: none;
+}
+
 @media (max-width: 767px) {
   body {
     background-attachment: fixed;
