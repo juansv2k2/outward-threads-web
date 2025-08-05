@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outward Threads</title>
+    <link rel="stylesheet" href="./chapter.css" />
+  </head>
+  <body class="home">
+    <div class="mainText">
+      <h2>The Embodied Perspective</h2>
+      <hr />
+      <h3>I am a Strange Loop</h3>
+
+      <p>
+        A <em>strange loop</em> can be seen as a form of recursion that creates
+        a sense of infinity.<span class="popover-container"
+          >*<span class="popover-content"
+            ><strong>Douglas R. Hofstadter, </strong
+            ><em>Gödel, Escher, Bach</em>;
+            <strong> Douglas R. Hofstadter, </strong>
+            <em>I Am a Strange Loop</em> (Basic Books, 2007).</span
+          ></span
+        >
+        The term <em>recursion</em> here is important. It originates in computer
+        sciences and consists of a programming technique where a function calls
+        itself to solve a problem. In addition, this concept has been adopted to
+        describe elements that appear repeated in self-similar ways. For
+        example, in nature, recursive structures are found in crystals and
+        plants.<span class="popover-container"
+          >*<span class="popover-content"
+            ><strong>Benoit B. Mandelbrot, </strong
+            ><em>The Fractal Geometry of Nature, Updated and Augmented ed.</em>
+            (New York: Freeman, 1983).</span
+          ></span
+        >
+      </p>
+
+      <p>
+        In music, the concepts of recursion and self-similarity have given rise
+        to vast investigations and the development of diverse compositional
+        applications for them. Even though there are many approaches to music
+        composition using these notions, most authors relate this idea to
+        techniques of counterpoint. In particular, those that have their origin
+        in the <em>prolatio</em> canon, which depends mainly on the simultaneous
+        rendition of the same theme at various temporal scales. Early examples
+        of these techniques can be found in works by the Renaissance composer
+        Johannes Ockeghem and more recurrently in the music of Josquin Des Prez.
+        A contemporary composer who made extensive use of
+        <em>prolatio</em> techniques in his composition is Conlon
+        Nancarrow.<span class="popover-container"
+          >*<span class="popover-content"
+            >See for example <strong>Kyle Gann, </strong
+            ><em>The Music of Conlon Nancarrow,</em> vol. 7 (Cambridge
+            University Press, 1995).</span
+          ></span
+        >
+      </p>
+
+      <p>
+        Another counterpuntual technique that has been associated with the idea
+        of recursion and self-similarity is the <em>crab</em> canon. A crab
+        canon or <em>canon cancricans</em> results when a cantus firmus is used
+        in its backward form –retrograde– as a counterpoint of itself in
+        original form.<span class="popover-container"
+          >*<span class="popover-content"
+            ><strong>H. Riemann and S.H. Lovewell,</strong>
+            <i
+              >Text-book of Simple and Double Counterpoint Including Imitation
+              Or Canon</i
+            >
+            (Breitkopf & Härtel, 1904).</span
+          ></span
+        >
+        Johann Sebastian Bach makes use of this resource recurrently in his
+        <em>Musical Offering,</em> BWV 1079, and in
+        <em>The Art of Fugue,</em> BWV 1080. Hofstadter uses some of these works
+        composed by Bach as analogous to the idea of a strange loop. According
+        to Hofstadter, these canons are examples of recursive and
+        self-referential structures present in Bach’s music.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_19.png"
+          style="width: 100%"
+          class="center-image"
+          alt=""
+        />
+        <div class="caption">
+          J.S. Bach, two-part canon from <em>The Musical Offering.</em> The
+          lower part is an exact retrograde of the upper part.
+        </div>
+      </div>
+
+      <p>
+        In the piece <em>I am a Strange Loop,</em> I employ the idea of
+        self-referentiality in a somewhat restricted and personal way: The
+        process of referencing occurs between two different works, where one is
+        developed almost entirely through the abstraction and posterior
+        remapping of certain musical parameters coming from a source piece.
+        Therefore, certain preexisting musical information recurs in a new form
+        in a different work. This is the essence of my use of parametrical
+        remapping as a compositional methodology. To a lesser extent, the method
+        involves developing recursive processes that occur within the new piece,
+        where the previously existing musical information sprouts across diverse
+        musical parameters on the new composition and at different levels.
+      </p>
+
+      <p>
+        Additionally, an interesting inquiry that emerges with this methodology
+        is connected to the perceptual connection between the preexisting piece
+        and the new one or the degree of presence or absence of the source piece
+        in the new one: Is it possible to create a new piece by remapping
+        information from a preexistent one in a way that these abstract
+        connections between the two become somehow audible? Is there a gray zone
+        where, while we hear a new-to-us composition, some auditory cues are
+        driving our perception to the recollection of a previously heard piece?
+      </p>
+
+      <h4>Section 1 – Remapping a Profile</h4>
+
+      <p>
+        As a departure point, I formalized the melodic profile of the theme from
+        Canon No. 2 of the <em>Musical Offering</em> as a linear BPF. This BPF
+        is used as a model for generating new musical representations of it.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_20.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Main Theme of Bach’s <em>Musical Offering</em>
+        </div>
+      </div>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_21.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Melodic profile of the theme as a linear function (x-axis represents
+          each note as a consecutive point; y-axis represents MIDI cents).
+        </div>
+      </div>
+
+      <p>
+        For this piece, I was interested in exploring the musical potential of
+        the subharmonic scale as a source of harmonic material and pitches.
+        Notice that the tonal center of the canon is C minor. For some
+        theorists, the minor mode can be explained as deriving from an inversion
+        of the natural harmonic series. This inversion yields a new scale known
+        as <em>subharmonic.</em> The composer Harry Partch has termed the
+        harmonic processes derived from the subharmonic scale as
+        <em>utonality.</em
+        ><span class="popover-container"
+          >*<span class="popover-content"
+            ><strong>Harry Partch,</strong>
+            <i
+              >Genesis of a music: an account of a creative work, its roots and
+              its fulfillments</i
+            >, 2nd, enl. ed. (New York: Da Capo Press, 1974).</span
+          >
+        </span>
+      </p>
+      <p>
+        The fundamental sub-harmonic note of a minor mode is the 5th note of its
+        root chord –to be very precise, it’s the 5th note of its root chord plus
+        2 cents. In this case, the C minor mode exists within the undertone
+        series of G<sub>8</sub> (+2ct). I use the G<sub>8</sub> subharmonic as
+        the source scale for my pitch and harmonic material in the first section
+        of the piece.
+      </p>
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_22.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+      </div>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_23.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          The source of the pitches in the piece
+          <em>I am a Strange Loop</em> is the set of 24 first partials of the
+          undertone series of the note G<sub>8</sub> (+2 MIDI cents). Above the
+          notes can be seen the deviation (in MIDI cents) from the
+          equal-tempered system. Below, it is shown the same scale in pitch
+          classes.
+        </div>
+      </div>
+
+      <p>
+        To create new melodic material, I used the melodic profile of the
+        original theme as a BPF that I used to map the partials of the undertone
+        series as points in a 2D space (ranging from 4 to 14), where each point
+        represents one of the notes in the new melodic theme. This process is a
+        <em>formal system</em> that can be expressed using a mathematical
+        formulation:
+      </p>
+
+      <p style="padding-left: 2em; padding-right: 2em; padding-top: 2em">
+        <em
+          >The undertone series is inverted relative to the harmonic series. If
+          we take the fundamental frequency (f<sub>0</sub>) of our desired
+          undertone series, and if we label the partials as p (with p starting
+          from 4 to 14 as given in your range), the corresponding frequency of
+          the p-th partial is inversely proportional to p:</em
+        >
+      </p>
+      <div class="math-equation">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <msub>
+            <mi>f</mi>
+            <mi>p</mi>
+          </msub>
+          <mo>=</mo>
+          <mfrac>
+            <msub>
+              <mi>f</mi>
+              <mi>0</mi>
+            </msub>
+            <mi>p</mi>
+          </mfrac>
+        </math>
+      </div>
+
+      <p style="padding: 2em">
+        <em
+          >The pitch <em>y</em> corresponding to each partial can be derived by
+          converting the frequency into MIDI note numbers using the following
+          formula (where 69 is the MIDI note number for A4 (440 Hz):</em
+        >
+      </p>
+
+      <div class="math-equation">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <mrow>
+            <mi>y</mi>
+            <mo>=</mo>
+            <mn>69</mn>
+            <mo>+</mo>
+            <mn>12</mn>
+            <mo>&#x22C5;</mo>
+            <!-- Multiplication dot -->
+            <msub>
+              <mi>log</mi>
+              <mn>2</mn>
+            </msub>
+            <mo>(</mo>
+            <mfrac>
+              <msub>
+                <mi>f</mi>
+                <mi>p</mi>
+              </msub>
+              <mn>440</mn>
+            </mfrac>
+            <mo>)</mo>
+          </mrow>
+        </math>
+      </div>
+
+      <p style="padding: 2em">
+        <em
+          >The melodic profile as a BPF is represented by the set of points
+          (p,y), where y is calculated using the equation below:</em
+        >
+      </p>
+
+      <div class="math-equation">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <mrow>
+            <mi>y</mi>
+            <mo stretchy="false">(</mo>
+            <!-- Non-stretchy left parenthesis -->
+            <mi>p</mi>
+            <mo stretchy="false">)</mo>
+            <!-- Non-stretchy right parenthesis -->
+            <mo>=</mo>
+            <mn>69</mn>
+            <mo>+</mo>
+            <mn>12</mn>
+            <mo>&#x22C5;</mo>
+            <!-- Multiplication dot -->
+            <msub>
+              <mi>log</mi>
+              <mn>2</mn>
+            </msub>
+            <mo>(</mo>
+            <mfrac>
+              <msub>
+                <mi>f</mi>
+                <mn>0</mn>
+              </msub>
+              <mrow>
+                <mn>440</mn>
+                <mo>&#x22C5;</mo>
+                <mi>p</mi>
+              </mrow>
+            </mfrac>
+            <mo>)</mo>
+          </mrow>
+        </math>
+      </div>
+
+      <p>
+        Mapping these partials into notes yields an inverted melodic theme to
+        the original. The reason for this is that the direction of the
+        sub-harmonics is inverted from the natural harmonic series, thus higher
+        partials represent lower notes:
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_24.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          The main theme for the piece <em>I am a Strange Loop.</em>
+        </div>
+      </div>
+
+      <p>
+        To operate melodic transformation and develop the main theme, in the
+        first section of the piece, this melodic profile is transformed via the
+        use of a <em>perturbation</em
+        ><span class="popover-container"
+          >*<span class="popover-content"
+            >Initially, I did this using some functions of the external Max
+            package BACH. Later, I realized that some of the functions that I
+            implemented for this process existed previously within the library
+            JBSprofiles in its version for Max, distributed in the external
+            package MOZ’Lib. Further discussion around the idea of profiles and
+            perturbations can be found in Chs. 5 and 6 in
+            <strong>Jacopo Baboni Schilingi,</strong>
+            <em>La Nuova Pratica: La musique hyper-systémique</em> (Éditions
+            Mix., 2018).</span
+          >
+        </span>
+        process, consisting of progressive intervallic compression over various
+        steps (in this case, eight). When these successive compressions are
+        later organized sequentially, starting from the last step (flat line) to
+        the initial step (original profile), this perceptually relates to a
+        process of expansion. The BPF graph below shows the eight steps of the
+        compression process of the original profile, superimposed on one
+        another. In the score, I present these eight lines sequentially (see the
+        score below), starting from the flat line and ending in the theme in its
+        normal shape.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_25.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          The various lines show how the original motive unfolds: In the
+          beginning, a flat line of repeated notes expands over time until it
+          embodies its original profile. The y-axis represents MIDI cents.
+        </div>
+      </div>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_26.png"
+          style="width: 90%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Process of ambit expansion of the main theme in the first section.
+        </div>
+      </div>
+
+      <p>
+        The noteheads indicate the important or anchoring notes, and the lines
+        indicate regions in between notes. These trajectories have been
+        simplified into a <em>glissando</em> line, which means that the notes in
+        between are not fixed.
+      </p>
+
+      <p>
+        In the domain of durations, I have formalized the melodic profile as a
+        warping temporal factor that alters the chronometric density and
+        durations of events at the level of the individual phrases and at the
+        overall level after the phrases are concatenated. The x-axis represents
+        time, and the y-axis represents the warping factor. Therefore, the
+        higher y values yield a higher chronometric density of events and
+        shorter durations, whereas the lower values yield longer durations and
+        scarce events.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_27.png"
+          style="width: 90%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+      </div>
+
+      <div class="image-container" style="padding-top: 0">
+        <img
+          src="./images/ch_7_fig_30.png"
+          style="width: 90%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+      </div>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_31.png"
+          style="width: 90%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Schematic view of the application of the BPF. At the level of
+          individual phrases and at the overall level after the phrases have
+          been concatenated. The result is shown in roll format with duration
+          lines. As a final step, the roll line must be quantized to fit into a
+          metric grid in a conventional instrumental score.
+        </div>
+      </div>
+
+      <p>
+        The form of the first section is determined as a loose analogy to the
+        form of Bach’s canon –the source piece. It has two parts of a somewhat
+        equivalent length. In the first part of the first section (m. 1-29), the
+        formal process is derived from the expansion of the original theme,
+        departing from a flat line of pitches and arriving at its original form
+        –the most expanded melodic line– after eight iterations in m. 29 (sop.
+        sax). After this, there is a climatic closing moment that produces a
+        build-up of energy that reaches an abrupt break in m. 49. The second
+        part of the first section develops the inverse idea. Instead of melodic
+        expansion, here, the melodic material is progressively compressed until
+        it gets to a line of repeated notes –a flat line– in m. 70. In addition,
+        the melodic material results from the inversion of the original theme.
+        Therefore, the formal idea for the first section resembles a type of
+        palindrome or <em>cancricans</em> organization –although not canonical,
+        rather, based on the expansion and compression of the thematic material
+        and its inversion.
+      </p>
+
+      <h5>Multiphonics</h5>
+
+      <p>
+        The use of multiphonics in the first section follows a certain logic. I
+        utilized a multiphonics database<span class="popover-container"
+          >*<span class="popover-content"
+            >The database belongs to Quasar Saxophone Quartet, and can be
+            accessed here:
+            <a href="https://q-phonics.com/" target="_blank"
+              >https://q-phonics.com/</a
+            >.</span
+          >
+        </span>
+        and applied an algorithm to extract their virtual subharmonic
+        fundamentals. Subsequently, I organized them based on their proximity to
+        the original subharmonic fundamental, from which I derived my pitch
+        material (G<sub>8</sub> + 2 cts). From this sorted list, I selected
+        specific multiphonics and incorporated them at various points in the
+        score. Essentially, the sonority of the multiphonics transitions from
+        more consonant to more dissonant in relation to the perceived tonal
+        center –C minor, derived from the G<sub>8</sub> subharmonic scale. See
+        the example below:
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_32.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Multiphonics used in the first section of the piece
+          <em>I am a Strange Loop.</em>
+        </div>
+      </div>
+
+      <h5>Outside the system</h5>
+
+      <p>
+        In the first version of the piece, the thematic material in the first
+        section was developed as a single line that expanded and contracted in
+        the baritone saxophone alone. The other instruments mostly played
+        repeated pitches that expanded and contracted rhythmically, serving as a
+        background. For the second and current version, I decided to re-compose
+        the entire first section and distribute the thematic material across the
+        four saxophones. Additionally, my intention was not for each of these
+        phrases to stand out prominently in the texture; rather, I aimed to
+        create a background from which these melodic figures would emerge and
+        dissolve. My approach was to begin the main phrases on unison notes,
+        which would be held and repeated, allowing the main theme to emerge from
+        them.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_33.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Example of the background-foreground use of the texture in the piece.
+          The red lines show the main theme and how it becomes distributed
+          across the texture. The blue and green lines show the background
+          figures. The main theme seems to emerge and sink back into these
+          repeated and held figurations.
+        </div>
+      </div>
+
+      <p>
+        An additional layer, prominent throughout the score, features vibratos
+        and varying degrees of airy sounds. This layer was developed during a
+        later compositional stage. One of my heuristic strategies for this layer
+        was to integrate the idea of speed fluctuation present in the rhythmic
+        structure, for instance, having the vibrato evolve from slow to fast and
+        vice versa.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_34.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Bars 34-36: Saxophones using different vibrato speeds.
+        </div>
+      </div>
+
+      <p>
+        The air sounds, particularly prominent at the beginning of the piece,
+        emerged as a means of connecting material from the improvised sections
+        with earlier material in the piece. Given the essentially distinct sonic
+        results of the improvised section and the written composition, I devised
+        strategies to bridge them, incorporating some posterior adjustments.
+        Ultimately, while the beginning and end of the piece sound quite
+        different, they are sonically connected through the recurring presence
+        of air and air sounds.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_35.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Bars 6-9: Transition from air sounds to pitch and vice versa.
+        </div>
+      </div>
+
+      <h4>Section 2 – Symbolic ring modulation</h4>
+
+      <p>
+        The second section of the piece comes as the result of applying symbolic
+        ring modulation to the complete canon and transcribing that as the
+        saxophone parts. For this, I computed the RM spectrum using the two
+        voices of the original canon as the carriers and the fundamental note of
+        the subharmonic scale (G) as the modulator. The result is a harmonic
+        spectrum consisting of four sidebands:
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_36.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Result of the symbolic ring modulation of the two-part canon as the
+          carrier signal and its fundamental subharmonic scale as the modulator.
+        </div>
+      </div>
+
+      <p>
+        This section is also derived from the source piece, still from a
+        relatively abstract process as the calculation of a ring modulation
+        spectrum. However, the notion of presence here somehow takes an
+        unprecedented space since the choral is somehow perceptually relatable
+        to the original Bach’s canon. Furthermore, formally, this section is a
+        literal reproduction of the canon in a different harmonic universe and
+        <em>time-warped:</em>
+        I again used the melodic profile of Bach’s canon theme as a BPF to
+        time-warp the complete choral.
+      </p>
+
+      <p>
+        It is worth discussing here how this approach changed in two successive
+        versions of the piece. For the first version, I wrote this section in
+        regular metric notation with a fixed tempo. Even though the sound result
+        should be of gradual <em>accelerandos</em> and
+        <em>rallentandos</em> across large periods, this process yielded a
+        fairly complex rhythmic notation, which made it too complex and somehow
+        misleading for the performers. To explore a better alternative for this,
+        in the second version, I changed this notation into fixed rhythmic
+        values along with gradually speeding up/slowing down tempo marks. Since
+        the ensemble moves in homophony, there are no issues of
+        multi-temporality, as in the first section, where every phrase is warped
+        differently and does not match with the other parts of the ensemble. In
+        this case, it is necessary to adopt a general tempo and write each part
+        in relation and proportion to it. The ring-modulation chorale was
+        re-notated completely from the first to the second version. See below:
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_37.jpg"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">The first version of Section 2 (mm. 61-81).</div>
+      </div>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_38.jpg"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">The second version of Section 2 (mm. 72-end).</div>
+      </div>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_39.png"
+          style="width: 65%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Plot of the tempo values used in Section 2 (mm. 72-end).
+        </div>
+      </div>
+
+      <h5>Reeds duo part</h5>
+
+      <p>
+        The reeds duo consists of an accordion and an organetto portativo, which
+        appear in the second section of the piece. Initially, I envisioned them
+        as emerging from the ring-modulation chorale, where they gradually
+        prolong certain pitches before becoming more active and independent. To
+        achieve this, the tuning of the organetto is adjusted to align with the
+        microtonality present in the saxophone parts. The accordion, on the
+        other hand, remains more subdued at first, acting as a subtle background
+        that slowly becomes more prominent towards the end of the section. The
+        two instruments become more prominent in the final improvised section.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_40.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Reeds duo score fragment (saxophones in concert pitch).
+        </div>
+      </div>
+
+      <h4>Section 3 – Improvisation</h4>
+
+      <p>
+        The final section of the piece consists of an improvisation part that
+        follows some guidelines. Overall, in this section, the note G
+        (fundamental pitch from the subharmonic scale) stands out. In the first
+        part of it, the saxophones must choose from a subset of multiphonics,
+        all of them containing the pitch G within their component notes. This
+        gives the overall sonority a relatively homogenous sound. Gradually, the
+        material expands to include vibrato and flutter-tongue sounds,
+        ultimately fading into air sounds, connecting back with this material as
+        it was presented in the first part of the piece.
+      </p>
+
+      <p>
+        Here, the reeds duo becomes responsive to what the saxophone quartet
+        does without further indications of actions or techniques. The
+        saxophones’ part evolves gradually; multiphonic sounds become pitched
+        sounds (note G) with vibrato and flutter-tongue, and finally, these
+        morph into air sounds. The piece fades into air and noise.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_41.png"
+          style="width: 70%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+      </div>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_42.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Two fragments of the improvised part in the saxophone quartet.
+        </div>
+      </div>
+
+      <h5>Electronics</h5>
+
+      <p>
+        The electronics appear in the improvised section and are primarily
+        generated from brain readings of one of the performers using an fNIRS
+        helmet. These readings are live-mapped into digital signal processes
+        within Ableton Live 12 through a Max4Live device that I developed in
+        collaboration with Ryan McCardle: fNIRS_to_Live, which I will discuss
+        more on it in the section ‘Contributions.’
+      </p>
+      <p>
+        For the current performance, the selected processes included resonant
+        filters, panning, delay, reverb, and a granulator, with parameters such
+        as delay times, the number of resonators, and grain size and density.
+        While fNIRS_to_Live allows for mapping all forty-two stream channels
+        coming from the fNIRS helmet into Ableton Live parameters, I limited the
+        mapping to sixteen channels for this performance. Each of the sixteen
+        channels affects one parameter individually. See the video below:
+      </p>
+      <div class="video-container">
+        <iframe
+          width="1080"
+          height="720"
+          src="https://www.youtube.com/embed/07xduxPSFqA"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="caption">
+        Video of the fNIRS helmet mapping into digital signal processes in
+        Ableton Live 12.
+      </div>
+
+      <p>
+        The idea of a strange loop is also connected to the electronic part, as
+        brain readings –mainly taken from the auditory and motor cortex– are
+        initially triggered by the auditory stimulation from the sounding music.
+        During the performance, the performers should respond to these
+        improvised sounds. These responses, in turn, create new sounds, which
+        influence the brain readings, forming a recursive musical strange loop.
+        The result of this process is a subtle layer of electronic sounds and
+        processes that seamlessly blend into the overall texture, adding an
+        additional dimension: a kind of <em>aura.</em>
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_43a.JPG"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Participants of the project from left to right: Anders Hannevold,
+          organetto; Sergej Tchikov, accordion; JÓR Saxophone Quartet (Anja
+          Nedremo, Soprano Saxophone; Kathrine Kirkeng Oseid, Alto Saxophone;
+          Morten Norheim, Tenor Saxophone, Anna Magnusson, Baritone Saxophone);
+          Karsten Specht. Not in the photo: Davide Bertolini, sound technician;
+          Ryan McCardle, fNIRS technician.
+        </div>
+      </div>
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_43b.JPG"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+      </div>
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_43c.JPG"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+      </div>
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_43d.JPG"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+      </div>
+      <hr />
+
+      <div class="buttons-container">
+        <a href="ch7_2.html" class="fancy-button">Previous</a>
+        <a href="table_of_contents.html" class="fancy-button">Back to Index</a>
+        <a href="ch7_4.html" class="fancy-button">Next</a>
+      </div>
+    </div>
+  </body>
+</html>

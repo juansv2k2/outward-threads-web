@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outward Threads</title>
+    <link rel="stylesheet" href="./chapter.css" />
+  </head>
+  <body class="home">
+    <div class="mainText">
+      <h2>Conclusions?</h2>
+      <hr />
+
+      <div class="document-map">
+        <h3>Chapter Overview</h3>
+        <ul>
+          <li>Contributions</li>
+          <ul>
+            <li>nPVIconstraints</li>
+            <li>MarkovConstraints</li>
+            <li>NeuralConstraints</li>
+            <li>fNIRS_to_live</li>
+            <li>Future Developments</li>
+          </ul>
+
+          <li>Conclusions</li>
+          <ul>
+            <li>A Neurocognitive Perspective</li>
+            <li>Composition and Institutionalization</li>
+            <li>The Borders of Formalization</li>
+            <li>AI: Enemy or Ally?</li>
+          </ul>
+
+          <li>Perspectives for the Future</li>
+        </ul>
+      </div>
+
+      <h3>Contributions</h3>
+
+      <p>
+        Part of the contribution to the field of this project is related to the
+        development of new technology in the form of software. During my
+        research position, I worked on the development of several CAC libraries
+        and functions. Initially, these came as tools to pursue certain creative
+        inquiries, and their use and implementation are at the core of all the
+        works in the Artistic Result. As they turned out to be quite handy and
+        user-friendly, I decided to make them available for other practitioners.
+        Essentially, all of these tools function as add-ons to the CAC libraries
+        Cluster-Engine and PWConstraints.
+      </p>
+
+      <h4>nPVIConstraints</h4>
+
+      <p>
+        The abstraction nPVIConstraints –a prototype of it was used in the piece
+        <em>Versificator – Render 3–</em> calculates the nPVI index<span
+          class="popover-container"
+        >
+          *
+          <span class="popover-content">
+            I discussed the nPVI index in more detail in the chapter ‘The
+            Cognitivist Paradigm’, particularly its use within the Vowel Chorale
+            generative module in the piece
+            <em>Versificator – Render 3.</em>
+          </span>
+        </span>
+        of a list of numbers. It is a useful tool to explore the idea of
+        contrastiveness in composition, initially related to durations but
+        easily translatable to any musical parameter. The nPVIConstraints
+        abstraction allows the use of the nPVI index as a constraint rule for
+        PMC or Cluster-Engine It is possible to choose a desired value for the
+        index or a range of values.
+      </p>
+
+      <div class="image-wrapper">
+        <img src="./images/ch_9_fig_1a.jpg" alt="Contributions" />
+        <img src="./images/ch_9_fig_1b.jpg" alt="Contributions" />
+      </div>
+      <div class="caption">
+        Example of melodic sequences created using nPVIConstrains. The one on
+        the left has a contrastiveness index (nPVI) of 3.67. The allowed values
+        were in the range between 2. and 4. The one on the right has a
+        contrastiveness index of 30.17. The allowed values were in the range
+        between 30. and 35.
+      </div>
+
+      <h4>MarkovConstraints</h4>
+
+      <p>
+        The module MarkovConstraints was used extensively in the piece
+        <em>Elevator Pitch.</em> It consists of a variable-order Markov chain
+        that functions as a constraint rule. MarkovConstraints is, at its core,
+        a refinement of a Markov rule written by Örjan Sandred.<span
+          class="popover-container"
+        >
+          *<span class="popover-content"
+            >This original rule can be found in the documentation of the library
+            Cluster-Engine in MOZ’Lib, in “demos,” “example [c].”
+          </span></span
+        >
+        My refinement of this rule consisted of making it a variable-order rule
+        (originally, it was an order 1 rule) and adding some basic functions to
+        deal with text, such as sieves and the option to use only alphanumeric
+        characters. It consists of two abstractions: MarkovConstraints-Matrix
+        and MarkovConstraints-Rule. MarkovConstraints-Matrix takes as input a
+        list and creates a Markovian transition matrix from it. Users can choose
+        the Markov order between 2nd and 4th as well as to apply an alphanumeric
+        filter for characters. The transition table is output as a global
+        variable that Cluster-Engine or PMC will access during the search
+        process.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_9_fig_2.jpg"
+          style="width: 40%"
+          class="center-image"
+          alt="Contributions"
+        />
+        <div class="caption">
+          The visual interface of the MarkovConstraints-Matrix abstraction. In
+          this example, the input list consists of a text fragment. Depending on
+          the chosen order (starting with 2nd), the matrix will be created for
+          three, four, or five consecutive letters. Additionally, it is possible
+          to sieve only alphanumeric characters.
+        </div>
+      </div>
+
+      <p>
+        The module MarkovConstraints-Rule, when attached to a Cluster-Engine
+        one-engine accessor, checks every possible combination of elements in
+        the domain and returns only those that exist within the Markov
+        transition matrix stored in the engine. The selected order should be
+        equivalent to the order choice for the matrix (consider that a rule for
+        a 4th order will take considerably more computational resources than an
+        2nd or 3rd orders).
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_9_fig_3.jpg"
+          style="width: 60%"
+          class="center-image"
+          alt="Contributions"
+        />
+        <div class="caption">MarkovConstraints-Rule.</div>
+      </div>
+
+      <p>
+        The rule can be efficiently chained to other constraint rules.
+        Therefore, the Markovian generative process –otherwise largely dependent
+        on probabilities– becomes feasible to be steered towards desired
+        outcomes in which both scopes –global and local– can be more effectively
+        controlled.
+      </p>
+
+      <h4>NeuralConstraints</h4>
+
+      <p>
+        Within this project, I worked in collaboration with Örjan Sandred and
+        Julien Vincenot on the development of NeuralConstraints (NC), a suite of
+        CAC tools that integrates a feedforward neural network as a rule within
+        a constraint-based compositional framework. I used these tools
+        extensively in the piece
+        <em>Oscillations (iii).</em> NC provides a user-friendly interface for
+        exploring symbolic neural generation and constraint algorithms,
+        providing a higher level of compositional control compared to
+        conventional neural generative processes.<span
+          class="popover-container"
+        >
+          *
+          <span class="popover-content">
+            A fully-detailed technical discussion about NeuralConstraints can be
+            found in
+            <strong>Vassallo, Juan S. et al.</strong> "Neuralconstraints:
+            Integrating a Neural Generative Model with Constraint-Based
+            Composition." <em> Frontiers in Computer Science, </em> vol. 7,
+            2025,
+            <a href="https://doi.org/10.3389/fcomp.2025.1543074" target="_blank"
+              >https://doi.org/10.3389/fcomp.2025.1543074</a
+            >
+          </span>
+        </span>
+      </p>
+
+      <p>
+        NC combines the generative abilities of neural networks trained on
+        symbolic data with a rule-based compositional system supported by an
+        advanced and backtracking constraint algorithm. This approach allows the
+        generation of a musical sequence that follows a rule guided by neural
+        network predictions while simultaneously being constrained by additional
+        rules. For example, it is possible to train a neural network on a set of
+        pitches from a corpus of melodies and use it as a heuristic rule that
+        will steer the solution toward melodic patterns based on these melodies.
+        In addition, this rule can be combined with other rules, such as desired
+        or allowed notes at certain time points, allowed interval movements,
+        patterns of repetition or non-repetition, and so on. The constraint
+        solver provides the logical framework to support these more structural
+        aspects of music, while the neural network offers an inferential method
+        where learned musical examples can influence the solution.
+      </p>
+      <p>
+        Traditional feedforward neural networks tend to produce deterministic
+        results, which limits their adaptability in dynamic compositional
+        contexts. One key innovation of NC is its use of neural networks as
+        heuristic guides rather than as deterministic predictors. To address
+        this limitation, we utilized Mean Absolute Error (MAE)<span
+          class="popover-container"
+          >*<span class="popover-content"
+            >Mean Absolute Error (MAE) is a metric used in ML in regard to
+            predictive models to measure the average magnitude of errors between
+            predicted and actual values in a dataset.
+          </span>
+        </span>
+        values as heuristic weights, ranking solutions by their relative fitness
+        instead of enforcing a single “correct” answer. This approach introduced
+        flexibility, allowing the neural network to influence the outcome in
+        interaction with other compositional rules, which can be either strict
+        or heuristic.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_9_fig_4.jpg"
+          style="width: 50%"
+          class="center-image"
+          alt="Contributions"
+        />
+        <div class="caption">
+          Interface of the NeuralConstraints-Train module.
+        </div>
+      </div>
+
+      <p>
+        One limitation of NC is that, as of now, it can only learn short-term
+        musical patterns. This is an important challenge, as a more advanced
+        approach would demand modeling both long- and short-term structures.
+        Although constraint rules can help manage long-term aspects, the future
+        development of NC might be tied to the implementation of more complex
+        LISP-based neural networks to address long-term musical structures.
+      </p>
+
+      <p>
+        Additionally, future improvements in the library aim to incorporate a
+        metric domain to improve melodic pattern recognition based on metric
+        recurrences. As of now, the “Multidomains” feature of Cluster-Engine
+        offers promise for expanding constraint rules to include parameters like
+        dynamics and articulations, although such an improvement would
+        potentially demand significantly more computational resources. Another
+        research thread consists of using NC as a tool for classifying inputs
+        rather than predicting continuations. Lastly, it is desirable to explore
+        the system’s potential for real-time applications, like live music
+        generation or interactive installations.
+      </p>
+
+      <h4>fNIRS_to_Live</h4>
+
+      <p>
+        The Max4Live device fNIRS_to_Live directly communicates between an fNIRS
+        helmet and Ableton Live, enabling real-time work with spectroscopic
+        brain readings as a source for live artistic experimentation, both in
+        sound and video.
+      </p>
+
+      <p>
+        The fNIRS helmet is capable of streaming data in real time, and this
+        data can be transmitted across the local network via the
+        LabStreamingLayer (LSL)<span class="popover-container">
+          *
+          <span class="popover-content">
+            "LabStreamingLayer [open source software package]," 2023,
+            <a href="https://github.com/sccn/labstreaminglayer" target="_blank"
+              >https://github.com/sccn/labstreaminglayer</a
+            >.
+          </span>
+        </span>
+        protocol. LSL is an open-source protocol widely used in research to
+        ensure precise synchronization of data streams across different devices,
+        and numerous manufacturers like NIRx support it. A specialized script
+        was developed to convert the LSL stream into an Open Sound Control (OSC)
+        stream in real time. As the NIRSport2 includes Wi-Fi recording
+        capabilities, it, along with two NIRSport2 devices, the Aurora recording
+        laptop, and the Max laptop, can all connect to the same Wi-Fi hotspot,
+        facilitating seamless wireless communication in real-time. The first
+        version of the communication protocol script between Aurora fNIRS and
+        Max was written in Python 3 by Ryan McCardle (Senior Engineer in the
+        Department of Biological and Medical Psychology of the University of
+        Bergen). The protocol employs the pylsl<span class="popover-container">
+          *
+          <span class="popover-content">
+            "pylsl [open source software package]," 2015,
+            <a href="https://github.com/chkothe/pylsl" target="_blank"
+              >https://github.com/chkothe/pylsl</a
+            >.
+          </span>
+        </span>
+        package to handle the LSL packets and the python-osc<span
+          class="popover-container"
+        >
+          *
+          <span class="popover-content">
+            "python-osc [open source software package]," 2023,
+            <a href="https://github.com/attwad/python-osc" target="_blank"
+              >https://github.com/attwad/python-osc</a
+            >.
+          </span>
+        </span>
+        package to dispatch the OSC packets. This script primarily filters out
+        the bulk of the data, leaving only the HbO (oxyhemoglobin) levels, and
+        sends out via OSC forty-two individual streams –one for each of the
+        forty-two channels recorded by the fNIRS helmet.
+      </p>
+
+      <p>
+        Building upon Ryan’s communication protocol, I wrote an interface in
+        Ableton Live that receives the data for all of the channels, and it can
+        then be utilized for parametrical control within Ableton Live. The
+        fNIRS_to_Live device is capable of receiving a stream of forty-two
+        channels as OSC messages via a UDP receiver function. From these
+        forty-two, it is possible to choose those to be shown on the graphic
+        viewer and map these lines as control signals for diverse Live –and
+        external– audio and MIDI effects via the mapping function.
+      </p>
+
+      <p>
+        In addition, the device includes a calibration function that learns the
+        maximum and minimum values of each channel over a desired time. Since
+        the scales for each channel might vary significantly, the calibration
+        smoothens the lines and contributes to an overall homogeneity of the
+        mappings. Additionally, the device allows for different configurations
+        for active channels, ranging from 1 to 48 simultaneously active
+        channels, saving and recalling presets, and reading preexisting data as
+        text files. In a subsequent refinement, I added a filter function, and a
+        speed limit for the data reception, which yields a smoother stream of
+        numbers. This can be adjusted dynamically.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_9_fig_5.png"
+          style="width: 95%"
+          class="center-image"
+          alt="Contributions"
+        />
+        <div class="caption">User interface of fNIRS_to_Live.</div>
+      </div>
+
+      <p>
+        Since fNIRS is an extremely expensive and sensitive medical technology,
+        I don’t expect it to be extensively used for artistic purposes anytime
+        soon. Nonetheless, while this technology becomes more available for
+        artistic purposes, I believe that future work could be directed towards
+        the use of measurements of higher cognitive functions to trigger
+        artistic effects concurrently,<span class="popover-container">
+          *
+          <span class="popover-content">
+            See for example<strong>Yuksel et al., </strong>"Short BRAAHMS: A
+            Novel Adaptive Musical Interface Based on Users' Cognitive State.";
+            <strong>S. K. Ehrlich et al.,</strong> "A closed-loop, music-based
+            brain-computer interface for emotion mediation,"
+            <em>PLoS One</em> 14, no. 3 (2019),
+            <a
+              href="https://doi.org/10.1371/journal.pone.0213516"
+              target="_blank"
+              >https://doi.org/10.1371/journal.pone.0213516</a
+            >.
+          </span>
+        </span>
+        rather than the obvious use of readings of brain responses to low-level
+        stimuli –such as the response of the auditory cortex to auditory
+        stimuli. This, I believe, could be a potential research direction to
+        follow.
+      </p>
+      <h4>Future Developments</h4>
+      <p>
+        Except for fNIRS_to_Live, in general, all my software developments
+        within this project have been related to constraint satisfaction
+        programming. In this line, an issue that I view as an important general
+        aspect to consider for future research is using this framework for
+        artistic endeavors in real time.<span class="popover-container">
+          *
+          <span class="popover-content">
+            A great example of real-time usage of constraint programming is the
+            work <em>Sonic Trails</em> by Örjan Sandred, a multimedia
+            installation for three semi-transparent screens, two projectors,
+            quadraphonic sound, and live electronic processing using constraint
+            programming. It is possible to find documentation on this work on
+            the author’s website,
+            <a href="https://sandred.com/" target="_blank"
+              >https://sandred.com/</a
+            >.
+          </span>
+        </span>
+        I did not pursue this inquiry directly within this project, as all my
+        implementations were meant to be used offline. However, I believe that
+        this issue is something that remains to be addressed. Additionally, I
+        see potential for future work in another scarcely investigated issue,
+        that of the use of constraint satisfaction programming for directly
+        synthesizing or processing sound. Even though the nature of constraint
+        programming is symbolic, it might be possible to map some symbolic
+        aspects of sound synthesis or digital signal processes for constrained
+        programming in an interesting way. Maybe this idea could take the thread
+        of previous work related to perceptually-informed composition by Sean
+        Ferguson<span class="popover-container">
+          *
+          <span class="popover-content">
+            <strong>Sean Ferguson and Richard Parncutt, </strong>"Composition
+            'in the flesh': Perceptually-informed harmonic syntax" (paper
+            presented at the International Conference on Sound and Music
+            Computing, Paris, 2004).
+          </span>
+        </span>
+        or composition and notation of synthetic sounds by Johannes Kretz.<span
+          class="popover-container"
+        >
+          *
+          <span class="popover-content">
+            <strong>Johannes Kretz,</strong> "KLANGPILOT - a new interface for
+            'writing' (not only) synthetic sounds" (paper presented at the
+            International Conference on Mathematics and Computing, 2011).
+          </span>
+        </span>
+      </p>
+
+      <hr />
+      <div class="buttons-container">
+        <a href="ch8_3.html" class="fancy-button">Previous</a>
+        <a href="table_of_contents.html" class="fancy-button">Back to Index</a>
+        <a href="ch9_2.html" class="fancy-button">Next</a>
+      </div>
+    </div>
+  </body>
+</html>

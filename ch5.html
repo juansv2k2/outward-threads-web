@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outward Threads</title>
+    <link rel="stylesheet" href="./chapter.css" />
+  </head>
+  <body class="home">
+    <div class="mainText">
+      <h2>The Connectionist Approach</h2>
+      <hr />
+      <div class="synopsis">
+        <p>
+          <em>Oscillations</em> is a cycle of three pieces, including narrated
+          and sung voice, piano, toy piano, electronics, and visuals. Drawing
+          inspiration from the song cycle <em>Winterreise,</em> written by W.
+          Müller and set to music by F. Schubert,
+          <em>Oscillations</em> reimagines selected songs from the cycle,
+          exploring their emotional landscapes through a personal lens and
+          compositional prism. On one hand, the musical and literary content of
+          the original cycle serves as a prompt for artificial resynthesis using
+          AI techniques. On the other hand, personal evocations are reimagined
+          as a new narrative for the poetry, a process I view in analogy to
+          <em>prompting,</em> but using the human mind as a latent space. The
+          work highlights questions of distinctiveness and similarity between
+          human and AI creativity, focusing particularly on the intuitive and
+          exploratory aspects of the creative process.
+        </p>
+
+        <p>
+          In this project, I collaborated with the Bergen-based artist Andrea
+          Urstad. She was in charge of the visual narratives –in the form of
+          video and projections. More about Andrea can be found at
+          <a href="https://www.andreatoft.com/">https://www.andreatoft.com/</a>
+        </p>
+
+        <div class="video-container">
+          <iframe
+            width="1080"
+            height="720"
+            src="https://www.youtube.com/embed/FafMeuMg7mQ"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="caption">
+          Performance of <em>Oscillations</em> during the final concert
+          presenting artistic results of the project Outward Threads. Date:
+          February 20th, 2025. Performers: Ludvig Lindström (voice), Diana
+          Galakhova (upright piano), Késia Decoté Rodrigues (grand piano, toy
+          piano), Anders Hannevold (percussion, accessories), Sergej Tchirkov
+          (accordion), Alexander Fiske-Fosse (narration), Andrea Urstad
+          (projections), Ana Maria Oancea (live filming), Juan S. Vassallo
+          (electronics). Concert organized in collaboration with Avgarde,
+          partially funded by the Morte Eide Pedersen Minnefond and Norsk
+          Komponistforening's (Norwegian Society of Composers) Ekspress
+          konsertstøtte. Sound engineer: Davide Bertolini; Light technician:
+          Ruben Olsen Lærk; Video recording: Eivind Bjørsvik; Video edition:
+          Pablo Oviedo.
+        </div>
+
+        <div class="video-container">
+          <iframe
+            width="1080"
+            height="720"
+            src="https://www.youtube.com/embed/OWPVtlxfByM"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="caption">
+          Performance of <em>Oscillations (i)</em> by Julie Hasfjord (voice),
+          Andrea Urstad (visuals), and Juan S. Vassallo (electronics). Recorded
+          at Studio A, Grieg Academy, on November 22, 2022. Recording
+          technician: Davide Bertolini.
+        </div>
+
+        <div class="toc-section">
+          <a
+            href="./scores/Oscillations-i.pdf"
+            class="fancy-button"
+            target="_blank"
+          >
+            <span>View Score (PDF)</span>
+            <br />
+            <span class="subtitle"><em>Oscillations (i)</em></span>
+          </a>
+          <a
+            href="./scores/Oscillations-ii.pdf"
+            class="fancy-button"
+            target="_blank"
+          >
+            <span>View Score (PDF)</span>
+            <br />
+            <span class="subtitle"><em>Oscillations (ii)</em></span>
+          </a>
+
+          <a
+            href="./scores/oscillations-iii.pdf"
+            class="fancy-button"
+            target="_blank"
+          >
+            <span>View Score (PDF)</span>
+            <br />
+            <span class="subtitle"><em>Oscillations (iii)</em></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="document-map">
+        <h3>Chapter Overview</h3>
+        <ul>
+          <li>
+            Connectionism
+            <ul>
+              <li>Artificial Neural Networks</li>
+              <li>Intuitive Computers / Rational Composers</li>
+            </ul>
+          </li>
+          <li>
+            <em>Oscillations</em>
+            <ul>
+              <li>Schubert-Müller’s <em>Winterreise</em></li>
+              <li>Ekphrasis and Misreading</li>
+              <li>Creative Process</li>
+            </ul>
+          </li>
+
+          <li>(Ongoing) Reflections</li>
+        </ul>
+      </div>
+
+      <h3>Connectionism</h3>
+
+      <blockquote>
+        <p>
+          “Events that co-occur in space or time become connected in the mind.
+          Events that share meaning or physical similarity become associated in
+          the mind. Activation of one unit activates others to which it is
+          linked, the degree of activation depending on the strength of
+          association”.
+        </p>
+        <footer>
+          — P. Gärdenfors<sup class="popover-container"
+            >*
+            <div class="popover-content">
+              <strong>Gärdenfors, </strong
+              ><em>Conceptual Spaces: The Geometry of Thought.</em>
+              71
+            </div>
+          </sup>
+        </footer>
+      </blockquote>
+
+      <p>
+        In the quote above, Peter Gärdenfors effectively captures the essence of
+        <em>connectionism,</em> highlighting the idea of associations within the
+        mind between co-occurring events. Rooted in the longstanding
+        philosophical theory of <em>associationism,</em
+        ><span class="popover-container">
+          *<span class="popover-content">
+            In philosophy, associationism explains mental processes as the
+            result of associations between ideas. Emerging from Aristotle’s
+            early ideas on principles of contiguity, similarity, and contrast as
+            mechanisms of memory and learning, it gained prominence in modern
+            philosophy during the 17th and 18th centuries with British
+            empiricist philosophers, notably John Locke (see
+            <strong>John Locke,</strong>
+            <em>An essay concerning human understanding</em> (1948)). Critics to
+            these theories argue that it is overly reductive, reducing thought
+            to mechanical links between ideas while neglecting higher-order
+            processes like reasoning and problem-solving. Noam Chomsky, for
+            example, has highlighted its failure to consider innate cognitive
+            structures that guide perception and language acquisition (see
+            <strong>Noam Chomsky,</strong>
+            <em>Syntactic structures</em> (Mouton de Gruyter, 2002)).
+            Additionally, Vygotsky and others challenge the universality of
+            associationist principles, highlighting the role of social
+            interaction and context in learning (see
+            <strong>Lev S Vygotsky,</strong>
+            <em>
+              Mind in society: The development of higher psychological
+              processes, vol. 86
+            </em>
+            (Harvard university press, 1978)). These limitations have spurred
+            the development of more nuanced theories in cognitive science, such
+            as connectionism, which addresses the gaps left by traditional
+            associationist views.
+          </span>
+        </span>
+        connectionism links learning to thought based on the principles of an
+        organism’s causal history. In essence, it posits that thoughts become
+        linked through an organism’s past experiences, which then serve as the
+        primary shaper of its cognitive architecture. connectionism builds on
+        this foundation and spans fields such as AI, cognitive science, and
+        neuroscience. Some theorists that have investigated connectionist
+        systems to model human thought are, for example, James L. McClelland,
+        David E. Rumelhart, Stephen Grossberg,<span class="popover-container">
+          *
+          <span class="popover-content">
+            <em>Neural Networks and Natural Intelligence,</em>
+            <strong> ed. Stephen Grossberg </strong> (The MIT Press, 1988).
+            <a
+              href="https://doi.org/10.7551/mitpress/4934.001.0001"
+              target="_blank"
+              >https://doi.org/10.7551/mitpress/4934.001.0001</a
+            >.
+          </span>
+        </span>
+        and Geoffrey Hinton.<span class="popover-container">
+          *
+          <span class="popover-content">
+            <strong>Geoffrey Hinton</strong> is one of the pioneering figures in
+            neural networks and deep learning. His contributions have been
+            instrumental in advancing the understanding of how connectionist
+            models can replicate aspects of human cognition. In 2023, Hinton
+            resigned from Google, expressing concerns about the potential
+            dangers posed by new deep learning technologies and the lack of
+            adequate control and regulation over their development and
+            deployment. In 2024, Hinton was awarded with the Nobel Prize in
+            Physics.
+          </span>
+        </span>
+      </p>
+
+      <p>
+        Connectionism aims to represent and model the human mind as emerging
+        from networks of single interconnected units.<span
+          class="popover-container"
+        >
+          *
+          <span class="popover-content">
+            <strong>Christoph Lischka and Andrea Sick,</strong>
+            <em>Machines as agency: artistic perspectives,</em> Schriftenreihe
+            ... der Hochschule für Künste Bremen; 4; 04, (Bielefeld, Piscataway,
+            NJ: Transcript; Distributed in North America by Transaction
+            Publishers, 2007).
+          </span>
+        </span>
+        In order to explain cognition using connectionist models, information is
+        represented as distributed patterns of activity over these
+        interconnected networks of processing units, and the process of learning
+        occurs through modifications of the strength of connections between
+        these units.<span class="popover-container">
+          *
+          <span class="popover-content">
+            <strong>John N Williams,</strong>
+            <em>"Associationism and connectionism,"</em> in
+            <em>Encyclopaedia of Language and Linguistics: Second Edition,</em>
+            ed. K.E. Brown (Oxford: Elsevier, 2005).
+          </span>
+        </span>
+        Several different kinds of connectionist models found in the literature
+        can be classified based on their architecture –inner structure– or modes
+        of learning. For instance, in some models, the units of a network may
+        represent neurons, with connections representing synapses. In other
+        models, each unit might represent a word, with connections indicating
+        semantic similarity.<span class="popover-container">
+          *
+          <span class="popover-content">
+            <strong>Tomas Mikolov,</strong>
+            "Efficient estimation of word representations in vector space,"
+            <em
+              >arXiv preprint
+              <a href="https://arxiv.org/abs/1301.3781">arXiv:1301.3781</a></em
+            >
+            (2013).
+          </span>
+        </span>
+        The structure of the connections and units varies from one model to
+        another. However, the most common model in connectionism is the
+        <em>neural network.</em> Connectionism uses these networks to represent
+        knowledge and concepts as a distributed representation across
+        connections.
+      </p>
+
+      <h4>Artificial Neural Networks</h4>
+      <p>
+        Artificial Neural Networks (ANNs) are composed of numerous simple and
+        highly interconnected units. While ANNs are inspired by the brain’s
+        neural architecture, it is important to acknowledge that they are not
+        directly comparable. Significant differences exist between biological
+        neurons and their artificial counterparts, and drawing a one-to-one
+        parallel between human neural networks and ANNs is not correct.<span
+          class="popover-container"
+        >
+          *
+          <span class="popover-content">
+            See for example: <strong>Thomas Wood,</strong>
+            <em>"How similar are Neural Networks to our brains?",</em>
+            <em> Fast Data Science </em> (2022).
+            <a
+              href="https://fastdatascience.com/ai-in-research/how-similar-are-neural-networks-to-our-brains/"
+              target="_blank"
+              >https://fastdatascience.com/ai-in-research/how-similar-are-neural-networks-to-our-brains/</a
+            >.
+          </span>
+        </span>
+      </p>
+
+      <p>
+        These single units are traditionally named <em>neurons,</em> and they
+        process information in parallel, in contrast to most symbolic models
+        where the processing is serial.<span class="popover-container">
+          *
+          <span class="popover-content">
+            <strong
+              >David E. Rumelhart, James L. McClelland, and PDP Research
+              Group,</strong
+            >
+            <em
+              >Parallel Distributed Processing, Volume 1: Explorations in the
+              Microstructure of Cognition: Foundations</em
+            >
+            (The MIT Press, 1986).
+            <a
+              href="https://doi.org/10.7551/mitpress/5236.001.0001"
+              target="_blank"
+              >https://doi.org/10.7551/mitpress/5236.001.0001</a
+            >.
+          </span>
+        </span>
+        Each unit receives some information as input and then transmits it to
+        other units according to some mathematical function –usually nonlinear.
+        There is no central control unit for the network; rather, all neurons
+        function as individual processors. The units have no memory in
+        themselves, but earlier inputs are represented indirectly via the
+        changes in <em>weights</em
+        ><span class="popover-container">
+          *
+          <span class="popover-content">
+            Weights in neural networks are numerical values that represent the
+            strength and influence of connections between neurons.
+          </span>
+        </span>
+        they have caused. As the changes in weights are slower than the changes
+        in the inputs, neural networks are less sensitive to
+        <em>noise</em>.<span class="popover-container">
+          *
+          <span class="popover-content">
+            Noise is any unwanted random disturbance or interference that
+            distorts or disrupts the transmission and processing of a signal,
+            affecting the clarity and accuracy of the information being
+            communicated.
+          </span>
+        </span>
+        Weights in a neural network determine the strength and influence of each
+        input on the output, with higher weights amplifying the input’s impact
+        and lower weights reducing it. The inputs to the network also gradually
+        change the strength –the weights– of the connections between units
+        according to some learning rule.
+      </p>
+
+      <p>
+        ANNs have been developed for diverse tasks, for example, for prediction
+        or classification purposes<span class="popover-container">
+          *
+          <span class="popover-content">
+            In Data Science, <em>prediction</em> and <em>classification</em> are
+            two fundamental concepts used for analyzing data and making informed
+            decisions. <em>Prediction</em> involves estimating a continuous
+            outcome based on input data. For example, predicting the future
+            stock price, temperature, or sales revenue based on historical data
+            and other influencing factors. The goal is to forecast a numeric
+            value. <em>Classification, </em>on the other hand, involves
+            assigning categorical labels to input data. It’s about sorting data
+            into predefined classes or groups. For example, classifying emails
+            as spam or not spam, determining if a tumor is benign or malignant,
+            or categorizing customer feedback as positive, neutral, or negative.
+          </span>
+        </span>
+        in fields such as computer vision, image classification, and language
+        processing, among others. However, nowadays, one of the most relevant
+        topics in contemporary societies –that of generative AI– is based mainly
+        on ANNs. Recent advancements in this field, especially those systems
+        known as Large Language Models (LLMs) like ChatGPT, utilize complex and
+        multi-layered networks to achieve the increasingly impressive results
+        that shock us every day.<span class="popover-container">
+          *
+          <span class="popover-content">
+            GPT stands for “Generative Pre-trained Transformer,” and it refers
+            to a type of language model that has generative capabilities, it is
+            pre-trained on vast amounts of text data and utilizes a neural
+            architecture known as transformer to understand and generate
+            human-like text. For a comprehensive survey of ChatGPT-related
+            research and its applications across various domains see
+            <strong> Yiheng Liu et al., </strong>
+            "Summary of chatgpt-related research and perspective towards the
+            future of large language models,"
+            <em>Meta-Radiology</em> 1 (2023), 2,
+            <a
+              href="https://doi.org/10.1016/j.metrad.2023.100017"
+              target="_blank"
+              >https://doi.org/10.1016/j.metrad.2023.100017</a
+            >.
+          </span>
+        </span>
+      </p>
+
+      <p>
+        Some of the drawbacks of using ANNs of the type described here for
+        representing information are that ANNs learn slowly, and they need huge
+        amounts of data for effective learning. Usually, these models require
+        large-scale computational infrastructure, which leaves a significant
+        carbon print.<span class="popover-container">
+          *
+          <span class="popover-content">
+            <strong>Ahmad Faiz et al.,</strong>
+            "LLMcarbon: Modeling the end-to-end carbon footprint of large
+            language models,"
+            <em
+              >arXiv preprint
+              <a href="https://arxiv.org/abs/2309.14393"
+                >arXiv:2309.14393</a
+              ></em
+            >
+            (2023).
+          </span>
+        </span>
+        Another problem is that ANNs are essentially fitted for a single domain,
+        for example, visual or speech recognition, mathematical prediction,
+        input classification, etc. An assumption that is implicitly made when
+        constructing an ANN is that there is a given domain for the receptors of
+        the network. The restriction to a particular domain turns out to confine
+        the representational capacities of ANNs. In general, a network cannot
+        generalize what it has learned from one domain to another.<span
+          class="popover-container"
+        >
+          *
+          <span class="popover-content">
+            However, in recent times, this is changing at a fast pace. For
+            example, recent research in adversarial neural networks,
+            transformers, and transfer learning techniques enhances ANNs’
+            ability to generalize across domains, allowing them to apply learned
+            knowledge from one area to another more effectively. See for example
+            <strong>Jindong Gu et al.,</strong>
+            "A survey on transferability of adversarial examples across deep
+            neural networks,"
+            <em
+              >arXiv preprint
+              <a href="https://arxiv.org/abs/2310.17626"
+                >arXiv:2310.17626</a
+              ></em
+            >
+            (2023).
+          </span>
+        </span>
+      </p>
+
+      <p>
+        There are two types of a learning process for an ANN:
+        <em>supervised</em> and <em>unsupervised.</em> In the supervised mode,
+        the inputs are matched to a target, which is then mapped as the expected
+        output for a similar type of input. An unsupervised learning process
+        means that the inputs are not matched with an expected output. Rather,
+        the network should find some similarities and recurrent patterns in the
+        data that should provide it with enough knowledge, for example, to
+        classify the inputs into a certain category.
+      </p>
+
+      <p>
+        When discussing the concepts of latent space and embedded space that I
+        mentioned in the ‘Multidisciplinary Insights’ chapter, we are
+        essentially referring to how ANNs represent information: as
+        high-dimensional spaces defined by the activity of neurons and the
+        connections between them. Unlike low-dimensional state spaces used in
+        symbolic systems, such as constraint algorithms, the dimensions of an
+        ANN are not easily interpretable by a human observer.
+      </p>
+
+      <h4>Neural Networks in Music</h4>
+      <p>
+        In the field of music, the use of ANNs can be generally divided into two
+        main trends: On one hand, music information retrieval models aim to
+        design models capable of recognizing temporal structure and semantics
+        present in music inputs;<span class="popover-container">
+          *
+          <span class="popover-content">
+            <strong>Keunwoo Choi et al.,</strong>
+            "Convolutional recurrent neural networks for music classification,"
+            <em>
+              Proceedings of the IEEE International conference on acoustics,
+              speech and signal processing (ICASSP),
+            </em>
+            (2017).
+          </span>
+        </span>
+        on the other hand, as generative models aimed to generate new music. For
+        example, the systems AIVA,<span class="popover-container">
+          *
+          <span class="popover-content">
+            <a href="https://www.aiva.ai/" target="_blank"
+              >https://www.aiva.ai/</a
+            >
+          </span>
+        </span>
+        Magenta,<span class="popover-container">
+          *
+          <span class="popover-content">
+            <a
+              href="https://magenta.tensorflow.org/music-transformer"
+              target="_blank"
+              >https://magenta.tensorflow.org/music-transformer</a
+            >
+          </span>
+        </span>
+        or MuseNet.<span class="popover-container">
+          *
+          <span class="popover-content">
+            <a href="https://openai.com/index/musenet/" target="_blank"
+              >https://openai.com/index/musenet/</a
+            >.
+          </span>
+        </span>
+        In both cases, these systems rely on a learned <em>dataset</em
+        ><span class="popover-container">
+          *
+          <span class="popover-content">
+            A dataset is a structured collection of data, often organized in
+            tables, arrays, or files, that is used for training neural networks
+            or other machine learning algorithms.
+          </span>
+        </span>
+        of preexisting musical data. These datasets can consist of musical
+        symbolic representations, such as the information encoded in a musical
+        score or audio samples.
+      </p>
+
+      <p>
+        In generative music systems, there are differences in complexity and
+        capabilities that affect their outcomes. Simple
+        <em>feedforward</em> networks<span class="popover-container">
+          *
+          <span class="popover-content">
+            In feedforward neural networks, information flows in one direction,
+            from input to output, through one or more layers of neurons, without
+            recurrences or feedback loops.
+          </span>
+        </span>
+        generally focus on basic pattern recognition, whereas
+        <em>deep learning</em
+        ><span class="popover-container">
+          *
+          <span class="popover-content">
+            <em>Deep learning</em> refers to the use of neural networks with
+            many (often dozens or more) hidden layers of neurons.
+          </span>
+        </span>
+        models use a layered architecture of neurons to capture more complex
+        patterns and longer temporal dependencies in data. Additionally, deep
+        learning models generally require substantial data and computational
+        power for the training phase, which is usually done using Graphic
+        Processing Units (GPUs) or Tensor Processing Units (TPUs).
+      </p>
+
+      <p>
+        Normally, generative systems based on ANNs primarily serve roles outside
+        of compositional artistic purposes. They largely generate music for
+        functional purposes. This is evident for some systems mentioned above,
+        for example, that are geared toward producing music for adaptable
+        purposes in different styles. The artistic depth of such output is less
+        compelling and appears more “instrumental” than expressive. However,
+        some music has been composed using ANNs for artistic and investigative
+        purposes.
+      </p>
+      <p>
+        An interesting example is Örjan Sandred’s
+        <em>Cracks and Corrosion II</em> for guitar and electronics (2004). In
+        this piece, an ANN is employed for timbre detection: the system analyzes
+        the guitar’s spectrum and sends the data to the ANN that classifies the
+        sound based on its timbral qualities –for example, more or less
+        noise.<span class="popover-container">
+          *
+          <span class="popover-content">
+            Previous research on this issue can be found for example in
+            <strong>Tae Hong Park, </strong>
+            <em>"Towards automatic musical instrument timbre recognition"</em>
+            (Princeton University, 2004).
+          </span>
+        </span>
+        The outcome of this analysis triggers different electronic samples
+        depending on the timbre detected. For instance, the playing technique of
+        rasgueado on the guitar will prompt different sounds in the electronics
+        compared to normal playing.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_5_fig_1.png"
+          style="width: 90%"
+          class="center-image"
+          alt="Machaut"
+        />
+
+        <div class="caption">
+          Fragment of the score of <em>Cracks and Corrosion II</em> by Örjan
+          Sandred.
+        </div>
+      </div>
+
+      <h4>Neural Networks and Intuition</h4>
+      <p>
+        Both types of ANNs –supervised and unsupervised– share certain
+        commonalities. For instance, the model isn’t explicitly taught rules
+        about the nature of its input. Instead, the ANN examines data,
+        identifying repetitions and making generalizations: it detects recurring
+        patterns within the observed data. Rather than being given rules, the
+        model infers them from experience. It generalizes from its training,
+        discerns patterns, and makes predictions, or classifies.
+      </p>
+      <blockquote class="juan">
+        <p>
+          <strong>
+            Wait. That sounds familiar. I wrote almost the same words when I
+            discussed intuition in the chapter ‘multidisciplinary Insights:’
+          </strong>
+        </p>
+      </blockquote>
+      <blockquote>
+        <p>
+          “Intuition, on the other hand, involves arriving at conclusions or
+          insights without the conscious use of formal rules or explicit
+          reasoning. It often feels like an immediate awareness of a solution,
+          idea, or decision. (…) Intuition is mainly based on tacit knowledge,
+          pattern recognition, generalization, and subconscious processing of
+          information.”
+        </p>
+        <footer>— ‘Multidisciplinary Insights’ (Intuitive vs. Rational)</footer>
+      </blockquote>
+      <blockquote class="juan">
+        <p>
+          <strong> Is AI intuitive, then? </strong>
+        </p>
+      </blockquote>
+      <p>
+        Herbert Simon,<span class="popover-container">
+          *
+          <span class="popover-content">
+            <strong>Herbert A. Simon</strong> was an influential American
+            economist, cognitive psychologist, and computer scientist who
+            received the Nobel Prize in Economic Sciences in 1978 for his
+            pioneering research on decision-making processes within economic
+            organizations.
+          </span></span
+        >
+        in the early 2000s, proposed that AI had reached a point where it could
+        replicate the mechanisms of human intuition.<span
+          class="popover-container"
+        >
+          *
+          <span class="popover-content">
+            <strong>Herbert A Simon and C Mellon,</strong>
+            <em
+              >"Explaining the ineffable: AI on the topics of intuition, insight
+              and inspiration,"</em
+            >
+            <em>IJCAI</em> (1) (1995); <strong>Roger Frantz,</strong>
+            <em
+              >"Herbert Simon. Artificial intelligence as a framework for
+              understanding intuition,"</em
+            >
+            <em>Journal of Economic Psychology</em> 24, no. 2 (2003/04/01/
+            2003),
+            <a
+              href="https://doi.org/10.1016/S0167-4870(02)00207-6"
+              target="_blank"
+              >https://doi.org/10.1016/S0167-4870(02)00207-6</a
+            >,
+            <a
+              href="https://www.sciencedirect.com/science/article/pii/S0167487002002076"
+              target="_blank"
+              >https://www.sciencedirect.com/science/article/pii/S0167487002002076</a
+            >.
+          </span></span
+        >
+        He argued that the processes underlying human decision-making and
+        problem-solving, often attributed to intuition, could be modeled and
+        simulated by AI systems. Simon’s claim was proposed a long time ago.
+        Visions around AI have changed, in particular after the emergence of
+        LLMs<span class="popover-container">
+          *
+          <span class="popover-content">
+            LLM stands for <em>large language models</em>. LLMs are a type of
+            artificial intelligence model designed to understand and generate
+            human language. They are trained on vast amounts of text data to
+            learn patterns, grammar, context, and even some level of reasoning.
+            LLMs can perform a wide range of language-related tasks, such as
+            text generation, translation, summarization, and question-answering.
+          </span></span
+        >
+        and subsidiary gen-AI systems. Currently, the discussion about intuition
+        in AI is focused, in particular, on the commonalities between the
+        learning process of LLMs and humans.
+      </p>
+      <p>
+        K. Hayles, for example, has proposed that the replication of cognitive
+        mechanisms in LLMs models is an uncanny reproduction of our associative
+        and rewarding learning process,<span class="popover-container">
+          *
+          <span class="popover-content">
+            <strong>K. Hayles’</strong> presentation
+            <em
+              >“Do LLMs Understand Humans and Their Questions, or Are They
+              ‘Stochastic Parrots’?”</em
+            >
+            (at the symposium
+            <em>“The Only Lasting Truth is Change,”</em> organized by Bergen
+            Senter for Elektronisk Kunst (BEK), November 18, 2023), revolved
+            mainly around this issue.
+          </span>
+        </span>
+        which is largely reliant on <em>semantic indexing</em>.<span
+          class="popover-container"
+        >
+          *
+          <span class="popover-content">
+            Semantic indexing is a technique in data science focused on
+            identifying patterns in the relationships between terms and concepts
+            within a text. It operates on the principle that words appearing in
+            similar contexts tend to have similar meanings. A key feature of
+            Latent Semantic Indexing (LSI) is its ability to extract the
+            conceptual content of a text by establishing associations between
+            terms that occur in similar contexts. For an accessible discussion
+            on issues around latent semantic analysis and semantic indexing,
+            visit the Wikipedia article “Latent Semantic Analysis” here
+            <a
+              href="https://en.wikipedia.org/wiki/Latent_semantic_analysis#Latent_semantic_indexing"
+              target="_blank"
+              >https://en.wikipedia.org/wiki/Latent_semantic_analysis#Latent_semantic_indexing</a
+            >. In order to understand better the role of semantic indexing in
+            large generative models, see for example
+            <a
+              href="https://www.sikich.com/insight/semantic-indexes-the-secret-sauce-for-supercharging-generative-ai-performance/"
+              target="_blank"
+              >https://www.sikich.com/insight/semantic-indexes-the-secret-sauce-for-supercharging-generative-ai-performance/</a
+            >.
+          </span>
+        </span>
+        The only difference, she says, is embodiment. The fact that our body
+        mediates between our mind and the world. This is not a minor thing, of
+        course. LLMs don’t have that, and unless they have it, probably they
+        won’t ever reach the level of human capacity for Artificial General
+        Intelligence (AGI).<span class="popover-container">
+          *
+          <span class="popover-content">
+            <strong>Artificial General Intelligence (AGI)</strong> is a type of
+            AI that can understand, learn, and apply knowledge across a wide
+            range of tasks at a level comparable to human intelligence. This
+            pursuit is at the core of the research efforts of big AI companies
+            like OpenAI and Microsoft. In this regard, a seminal research report
+            was published in March 2023, based on experiments with the model
+            ChatGPT 4. See <strong>Bubeck et al.,</strong> "Sparks of Artificial
+            General Intelligence: Early experiments with GPT-4."
+            <em>arXiv preprint </em>
+            <a href="https://arxiv.org/abs/2303.12712" target="_blank"
+              >arXiv:2303.12712</a
+            >
+          </span>
+        </span>
+        However, for K. Hayles, it seems that the rest of it is a shared process
+        between humans and AI models, therefore, intuition could be seen as an
+        emergent property of AI models. Of course, the fact that we might share
+        some cognitive mechanisms with AI doesn’t make it literally intuitive,
+        sentient, or alive in a human form.<span class="popover-container">
+          *
+          <span class="popover-content">
+            The problem, as Margaret Boden says, comes with the use of the verb
+            <em>is</em> (from the verb <em>to be</em> in English), as it would
+            equate these systems in some way with humans, opening the door to
+            deeper ethical issues. If AI models <em>are,</em> then they are
+            subjects of rights, ownership, etc. See chapter 11 in
+            <strong>Boden,</strong>
+            <em>The creative mind: myths and mechanisms.</em>
+          </span>
+        </span>
+        As of now, there is no evidence of sentience or self-awareness in them,
+        despite some recent claims.<span class="popover-container">
+          *
+          <span class="popover-content">
+            “Blake Lemoine on Whether Google’s AI Has Come to Life,”
+            <a
+              href="https://futurism.com/blake-lemoine-google-interview"
+              target="_blank"
+              ><em>‘Futurism’</em></a
+            >, accessed Oct. 30, 2024.
+          </span>
+        </span>
+        Boden proposes that AI is seemingly creative or seemingly intuitive. It
+        appears to be so. And appears to do it very well.
+      </p>
+      <blockquote class="juan">
+        <p>
+          <strong>
+            Ultimately, stating that AI is intuitive is a bold claim and remains
+            a somewhat unclear and contentious area to explore; however, as we
+            might see from above, intuition and AI may be more closely related
+            than one might initially think. For now, still, I prefer to leave it
+            as an open question; I will delve deeper into these and other
+            related issues surrounding AI in the section ‘Composition and
+            gen-AI.’
+          </strong>
+        </p>
+      </blockquote>
+      <h3>Intuitive Computers / Rational Composers</h3>
+      <p>
+        The subtitle of the project,
+        <em>Intuitive Computers / Rational Composers,</em> is intentionally
+        provocative, as it proposes a subverted perception of the typical
+        creative process involving computers: it is normally the computer the
+        agent that applies the rules and does all the calculations, and it is
+        the composer who brings its own intuition and non-linear thought to
+        infuse these algorithmic and hyper formalized outcomes with a spark of
+        life or added interest –a notion I discussed extensively in the piece
+        <em>Versificator – Render 3</em>. However, here the equation is
+        reversed: the computer takes on the role of an intuitive agent, while
+        the composer uses logical rules to shape and refine the computer’s
+        intuitive outputs. What does this mean?
+      </p>
+      <p>
+        In the next piece –or more precisely, the cycle of pieces– a significant
+        part of my creative investigation revolved around a suite of CAC tools
+        that integrate a feedforward neural network with a constraint-based
+        compositional framework. The system combines the predictive capabilities
+        of neural networks trained on symbolic musical data with a backtracking
+        constraint solver, allowing the integration of inferential
+        <em>–intuitive?</em>
+        and rule-based <em>–rational?</em> approaches in a compositional
+        workflow. I named this suite of tools NeuralConstraints. The development
+        of this library became a central focus of my research in the later
+        stages, requiring substantial effort on its technical implementation,
+        hence the relevance of the subtitle.
+      </p>
+      <p>
+        In what comes next, however, I will briefly outline its role in my
+        creative process and focus on the creative use of it in the pieces. A
+        longer description of NeuralConstraints can be found in the chapter
+        ‘Contributions/Conclusions?.’ Additionally, the technical explanations
+        and tests included to further demonstrate the library’s capabilities
+        have been published elsewhere as a scientific journal article.<span
+          class="popover-container"
+        >
+          *
+          <span class="popover-content">
+            <strong>Vassallo, Juan S. et al.</strong> "Neuralconstraints:
+            Integrating a Neural Generative Model with Constraint-Based
+            Composition." <em>Frontiers in Computer Science,</em> vol. 7, 2025,
+
+            <a href="https://doi.org/10.3389/fcomp.2025.1543074" target="_blank"
+              >https://doi.org/10.3389/fcomp.2025.1543074</a
+            >
+          </span>
+        </span>
+        But before that, I will discuss the motivation and conceptual backdrop
+        behind the piece <em>Oscillations.</em>
+      </p>
+      <hr />
+      <div class="buttons-container">
+        <a href="ch4_2.html" class="fancy-button">Previous</a>
+        <a href="table_of_contents.html" class="fancy-button">Back to Index</a>
+        <a href="ch5_2.html" class="fancy-button">Next</a>
+      </div>
+    </div>
+  </body>
+</html>

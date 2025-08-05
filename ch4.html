@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outward Threads</title>
+    <link rel="stylesheet" href="./chapter.css" />
+  </head>
+  <body class="home">
+    <div class="mainText">
+      <h2>The Cognitivist Paradigm</h2>
+      <hr />
+      <div class="synopsis">
+        <p>
+          The idea for the piece <em>Versificator – Render 3</em> comes
+          originally as a metaphor for the versificator created by George Orwell
+          in the novel <em>1984</em> whose main purpose was to act as an
+          automatic generator of literature and music. I am an avid consumer of
+          science fiction literature and films, and while thinking of automated
+          music generation as an instrument of alienation in dystopian
+          literature from the middle 20th century –in particular in Orwell and
+          Huxley– I came up with a thought: what if there was something
+          artistically valuable that could come out of these machines? What if
+          creative machinic automation, instead of being used as an instrument
+          of alienation, could be used as a compositional tool that could
+          contribute to creating interesting musical works? The result of the
+          implementation of an almost totally automated algorithmic rule-based
+          compositional workflow and its creative exploration is the piece
+          <em>Versificator – Render 3</em> for vocal ensemble. In the novel
+          <em>1984,</em> the versificator plays a role as a tool of social
+          control. In this work, the metaphor for the versificator is reframed
+          as a tool employed to artistically investigate music and text
+          composition through the interplay between an automated but still
+          dynamic cycle of generative exploration in dialog with the creative
+          subjectivity of a composer.
+        </p>
+
+        <div class="video-container">
+          <iframe
+            width="1080"
+            height="720"
+            src="https://www.youtube.com/embed/40d1EO1EFn4"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="caption">
+          Performance of <em>Versificator – Render 3</em> by the vocal ensemble
+          Tabula Rasa (Rikke Lina Sorell Matthiesen, soprano; Sigrun Jødre,
+          mezzo-soprano; Tord Kalvenes, tenor; Arild Rohde, tenor; Jakub
+          Niedziela, bass) during the final concert presenting artistic results
+          of the project Outward Threads. Date: February 20th, 2025. Concert
+          organized in collaboration with Avgarde, partially funded by the Morte
+          Eide Pedersen Minnefond and Norsk Komponistforening's (Norwegian
+          Society of Composers) Ekspress konsertstøtte. Sound engineer: Davide
+          Bertolini; Light technician: Ruben Olsen Lærk; Video recording: Eivind
+          Bjørsvik; Video edition: Pablo Oviedo.
+        </div>
+
+        <div class="toc-section">
+          <a
+            href="./scores/Versificator-Render-3.pdf"
+            class="fancy-button"
+            target="_blank"
+          >
+            <span>View Score (PDF)</span>
+            <br />
+            <span class="subtitle"
+              ><em>Versificator - Render 3 (version Feb. 2025)</em></span
+            >
+          </a>
+        </div>
+      </div>
+
+      <div class="document-map">
+        <h3>Chapter Overview</h3>
+
+        <ul>
+          <li>
+            Cognitivism
+            <ul>
+              <li>Symbolic AI</li>
+            </ul>
+          </li>
+          <li></li>
+          <li>
+            The Question of Computability in Music Composition
+            <ul>
+              <li>Musical Search Spaces</li>
+            </ul>
+          </li>
+          <li>
+            <em>Versificator - Render 3</em>
+            <ul>
+              <li>Musical material</li>
+              <li>Generative modules</li>
+              <li>Formal organization</li>
+              <li>outside the system</li>
+            </ul>
+          </li>
+          <li>Final Reflections</li>
+        </ul>
+      </div>
+
+      <h3>Cognitivism</h3>
+      <p>
+        In cognitive sciences, the theoretical approach that views the human
+        mind mainly as a system that primarily manipulates and processes symbols
+        and symbolic representations is known as <em>cognitivism.</em> From this
+        perspective, cognition is seen as essentially being computation: the
+        mind is viewed as a machine<span class="popover-container"
+          >*
+          <span class="popover-content">
+            The idea of the machine comes from the Turing machine. It was first
+            theorized by Alan Turing in 1936, and it describes a theoretical
+            computational model consisting of an infinite tape and a finite set
+            of rules that dictate how symbols are read, written, and manipulated
+            to perform computational processes. Moreover, Turing machines are
+            considered to be one of the foundational models of computability. In
+            <strong>Turing</strong>, "On computable numbers, with an application
+            to the Entscheidungsproblem."
+          </span>
+        </span>
+        that processes symbols, with thoughts organized into symbolic systems
+        that can be articulated in a structured, logical manner.
+      </p>
+
+      <p>
+        The ideas of cognitivism initially emerged in the work of the computer
+        scientists Allen Newell and Herbert Simon and the philosophers Hilary
+        Putnam, Gilbert Harman, and Jerry Fodor. In his book
+        <em>Modularity of the Mind,</em> Fodor proposes that having a mind
+        entails that we are equipped with a sophisticated assembly of numerous
+        computers, each dedicated to a distinct mental function such as
+        perception, memory, language processing, decision-making, and motor
+        control. These computers are interconnected within a complex
+        “computational architecture,” where the output of one subsystem serves
+        as the input of another.<span class="popover-container"
+          >*
+          <span class="popover-content">
+            <strong>Jerry A. Fodor</strong>,
+            <em>The modularity of mind</em>
+            (MIT Press, 1983).
+          </span>
+        </span>
+      </p>
+
+      <p>
+        Fodor also discusses an important concept, which is related to the
+        modularity and non-modularity of cognitive systems. Fodor argues that
+        some of our cognitive systems are encapsulated, meaning they operate
+        independently of each other and are not influenced by general knowledge
+        or other cognitive processes. This encapsulation allows for efficient
+        and rapid processing within specific domains. Fodor also acknowledges
+        the existence of non-modular, central systems that integrate information
+        from various modules to perform higher-level cognitive tasks like
+        decision-making and problem-solving.
+      </p>
+
+      <h4>Symbolic AI</h4>
+      <p>
+        The first scientists working with AI became fascinated by cognitivist
+        theories, and in fact, the first developments in AI were based on
+        implementations of logical systems of learning and decisions. Scientists
+        like John McCarthy and Marving Minsky were convinced that the human mind
+        was a huge computer, and creating systems that imitate the human mind
+        would eventually lead to the development of an intelligent system.<span
+          class="popover-container"
+          >*
+          <span class="popover-content">
+            The first conference that brought together top researchers from
+            various fields for an open-ended discussion on AI was the Dartmouth
+            Summer Research Project on Artificial Intelligence (DSRPAI) hosted
+            by John McCarthy and Marvin Minsky in 1956.
+          </span>
+        </span>
+      </p>
+      <p>
+        Symbolic AI is an approach that involves representing knowledge using
+        symbols and manipulating those symbols to perform reasoning and
+        problem-solving tasks. In symbolic AI, the focus is on building systems
+        that can reason about abstract concepts, use them to solve problems, and
+        eventually transfer these concepts into different knowledge domains,
+        including those involved in creativity.
+      </p>
+      <blockquote class="juan">
+        <p>
+          <strong>
+            Some theorists have linked human creativity to a computational
+            process rooted in the symbolic processing and organization of
+            information. In music composition, for example, we might consider
+            creativity as guided by rules that shape musical form, material,
+            technique, and style. Approaching the process of composing from a
+            cognitivist perspective has guided my exploration of the first
+            <em>‘labyrinth’</em> in the piece <em>Versificator – Render 3.</em>
+            However, a natural question arises:
+          </strong>
+          <em>
+            <strong>
+              is creativity solely about logical formulations, rules, and
+              computational algorithms?
+            </strong>
+          </em>
+        </p>
+      </blockquote>
+      <h3>The Question of Computability in Music Composition</h3>
+      <p>
+        The notion of <em>computability</em> in composition dates back to the
+        1950s when some composers began drawing analogies between creative
+        methods and computational processes. The composer Petr Haas notes that
+        the use of <em>algorithm-like</em
+        ><span class="popover-container"
+          >*
+          <span class="popover-content">
+            An <em>algorithm</em> is a set of step-by-step instructions designed
+            to perform a specific task or solve a particular problem. In
+            <strong>Thomas H. Cormen et al.,</strong>
+            <em>Introduction to Algorithms, Third Edition, 3rd ed.</em>
+            (Cambridge: Cambridge: MIT Press, 2009).
+          </span>
+        </span>
+        methods in composition dates back to the complex evolution of polyphonic
+        music and the advent of musical notation systems.<span
+          class="popover-container"
+          >*
+          <span class="popover-content">
+            <strong>Petr Haas</strong>, "The language of the assistant and the
+            language of the creator: selected aspects of computer assisted
+            composition," <em>Musicologica Brunensia 52,</em> no. 2 (2017),
+            <a href="https://doi.org/10.5817/MB2017-2-12"
+              >https://doi.org/10.5817/MB2017-2-12.
+            </a></span
+          ></span
+        >
+        Over the centuries, compositional methods gradually shifted toward
+        rule-based processes, which led composers toward desired musical
+        outcomes.
+      </p>
+      <p>
+        As an example, it is possible to observe the works of historical figures
+        such as Guillaume de Machaut and Phillipe de Vitry as these demonstrate
+        this early propensity for isorhythmic composition, even when this method
+        sometimes would go to the detriment of the text’s congruence with the
+        music. <em>Isorhythm</em> (trad. From Greek: “the same rhythm”) is a
+        compositional technique that emerged around the 13th century. It
+        consists of iteratively pairing together single rhythmic and melodic
+        independent units, that function independently from one another.
+      </p>
+      <p>
+        In the opening of the “Kyrie I” from the
+        <em>Messe de Notre Dame</em> by Guillaume de Machaut (1300-1377), there
+        is a twenty-eight-note color arranged into seven talea. Each talea
+        consists of four note durations. After seven repetitions of the talea,
+        the twenty-eight notes of the color reappear from the beginning:
+      </p>
+      <div class="image-container">
+        <img
+          src="./images/ch_4_fig_1.jpg"
+          style="width: 100%"
+          class="center-image"
+          alt="Machaut"
+        />
+        <div class="caption">
+          Modern notation transcription of the isorhythmic tenor line from the
+          opening “Kyrie” of Guillaume de Machaut’s
+          <em>Messe de Nostre Dame</em> (c. 1360). Here, a color consisting of
+          twenty-eight pitches is structured with a talea of four rhythmic
+          values, repeated seven times (28 ÷ 4 = 7).<span
+            class="popover-container"
+            >*<span class="popover-content"
+              >Guido Magnano at Italian Wikipedia. - Transferred from
+              it.wikipedia to Commons., Public Domain,
+              https://commons.wikimedia.org/w/index.php?curid=1944847
+            </span></span
+          >
+        </div>
+      </div>
+      <p>
+        An isorhythmic process can be described as the manipulation of two
+        lists: one, an ordered collection of duration values –a
+        <em>talea,</em> and the other, an ordered collection of pitch values –a
+        <em>color.</em> Each list is looped separately and in parallel. For each
+        cycle, the elements from both lists are paired consecutively, with one
+        element from talea paired with one element from color. If one list is
+        shorter than the other, it will run out of elements before the longer
+        list finishes, at which point the shorter list is looped back to the
+        beginning. Using lists of different lengths is a common feature of this
+        technique. The overlapping of lists prevents them from realigning at the
+        end of each loop. As a result, with each repeat, talea and color will
+        coincide at different positions in the lists before all combinations are
+        completed. As an example, let us consider the following talea (A B C)
+        and color (W X Y Z). Below can be seen each iteration of the loop:
+      </p>
+      <ul>
+        <li>Iteration 1: ((A W) (B X) (C Y))</li>
+        <li>Iteration 2: ((A Z) (B W) (C X))</li>
+        <li>Iteration 3: ((A Y) (B Z) (C W))</li>
+        <li>Iteration 4: ((A X) (B Y) (C Z))</li>
+        <li>
+          Iteration 5: ((A W) (B X) (C Y)) — The sequence has now returned to
+          the starting configuration.
+        </li>
+      </ul>
+      <p>
+        This simple isorhythmic process can be expressed as computer code.
+        Below, in LISP:<span class="popover-container"
+          >*
+          <span class="popover-content">
+            Lisp is a family of programming languages designed by John McCarthy
+            in 1958. It is characterized by its fully parenthesized syntax and
+            nested list-based data structures, making it particularly
+            well-suited for processing symbolic information and creating
+            recursive functions. Lisp became foundational in the development of
+            artificial intelligence during the 1960s and 1970s. For a long time,
+            Lisp became the norm for musical programming and computer-assisted
+            composition, in part, due to the similarities between Lisp’s lists,
+            which can closely represent the complexity of symbolic musical
+            representation as scores.
+          </span>
+        </span>
+      </p>
+
+      <pre><code class="language-lisp">
+  <span class="keyword">(progn</span>  <span class="comment">; Group multiple expressions to evaluate them sequentially.</span>
+    <span class="keyword">(setq</span> <span class="variable">talea</span> <span class="string">'(A B C)</span>)  <span class="comment">; Set the variable `talea` to a list of symbols: '(A B C).</span>
+    <span class="keyword">(setq</span> <span class="variable">color</span> <span class="string">'(W X Y Z)</span>)  <span class="comment">; Set the variable `color` to a list of symbols: '(W X Y Z).</span>
+  
+    <span class="keyword">(defun</span> <span class="function">pair-talea-color</span> (<span class="variable">talea</span> <span class="variable">color</span>)  <span class="comment">; Define a function named `pair-talea-color` that takes two arguments: `talea` and `color`.</span>
+    <span class="keyword">(let*</span> ((<span class="variable">talea-length</span> (<span class="function">length</span> <span class="variable">talea</span>))  <span class="comment">; Calculate the length of the `talea` list and store it in `talea-length`.</span>
+           (<span class="variable">color-length</span> (<span class="function">length</span> <span class="variable">color</span>))  <span class="comment">; Calculate the length of the `color` list and store it in `color-length`.</span>
+           (<span class="variable">cycle-length</span> (<span class="function">lcm</span> <span class="variable">talea-length</span> <span class="variable">color-length</span>)))  <span class="comment">; Compute the least common multiple (LCM) of `talea-length` and `color-length`, storing it in `cycle-length`.</span>
+    <span class="keyword">(loop</span> <span class="keyword">for</span> <span class="variable">i</span> <span class="keyword">from</span> <span class="number">0</span> <span class="keyword">below</span> <span class="variable">cycle-length</span>  <span class="comment">; Loop from 0 up to below `cycle-length`.</span>
+          <span class="keyword">collect</span> (<span class="keyword">list</span> (<span class="function">nth</span> (<span class="function">mod</span> <span class="variable">i</span> <span class="variable">talea-length</span>) <span class="variable">talea</span>)  <span class="comment">; Get the `i`-th element of `talea`, cycling using `(mod i talea-length)`, and pair it...</span>
+                        (<span class="function">nth</span> (<span class="function">mod</span> <span class="variable">i</span> <span class="variable">color-length</span>) <span class="variable">color</span>)))))  <span class="comment">; ...with the `i`-th element of `color`, cycling using `(mod i color-length)`.</span>
+
+  (<span class="function">pair-talea-color</span> <span class="variable">talea</span> <span class="variable">color</span>))  <span class="comment">; Call the `pair-talea-color` function with the `talea` and `color` lists and return the resulting list.</span>
+
+  <span class="comment">;; result: '((A W) (B X) (C Y) (A Z) (B W) (C X) (A Y) (B Z) (C W) (A X) (B Y) (C Z))
+</span>
+</code></pre>
+      <p>
+        Haas further refers to Johann Joseph Fux’s influential treatise
+        <em> Gradus ad Parnassum </em> (1725) as a foundational rule-based
+        system, particularly for mastering counterpoint. According to Haas, the
+        more precise the formulation of these rules, the “stricter” the
+        counterpoint or method, the easier it becomes to translate into machine
+        language.<span class="popover-container"
+          >*
+          <span class="popover-content">
+            <strong>Haas</strong>, "The language of the assistant and the
+            language of the creator: selected aspects of computer assisted
+            composition," 122.
+          </span>
+        </span>
+        This is exemplified by the <em>Illiac Suite</em> (1958), the first
+        recognized piece created using a computer, which bases an entire
+        movement on Fux’s counterpoint principles, by translating complex
+        polyphonic rules into computational logic.
+      </p>
+      <p>
+        Other composers, such as Iannis Xenakis and Gottfried König, were also
+        pioneers in this field. Their vision and understanding of human creative
+        processes in music composition acted as catalysts for employing
+        computers in composition, viewing them as somewhat analogous to a
+        composer’s creative process. With their ability to provide greater
+        processing power, speed, and advanced search methods for solving
+        specific musical problems, computers were seen as valuable tools for
+        advancing research in composition. Unlike Hiller and Isaacson’s
+        approach, however, these composers aimed to develop a logic of musical
+        composition that transcended specific stylistic or historical
+        methodologies.
+      </p>
+      <blockquote>
+        <p>
+          “Naturally, one does not program known rules of composition but also
+          tries to find out whether events not yet expressed in the form of
+          rules are feasible. The computer thus has a stimulating effect on
+          research in composition theory.”
+        </p>
+        <footer>
+          — Gottfried Michael Koenig<sup class="popover-container"
+            >*
+            <div class="popover-content">
+              <strong>Gottfried Michael Koenig</strong>, "The use of computer
+              programmes in creating music," <em>La Revue Musicale</em>
+              (1970), 3.
+            </div>
+          </sup>
+        </footer>
+      </blockquote>
+      <p>
+        Xenakis metaphorically describes his creative process involving the use
+        of electronic computers as piloting a spaceship:
+      </p>
+      <blockquote>
+        <p>
+          “Freed from tedious calculations, the composer can devote himself to
+          the general problems posed by the new musical form and explore the
+          corners in this way while modifying the values of the input data. (…)
+          With the help of electronic computers, the composer becomes a kind of
+          pilot: press buttons, enter coordinates, and supervise the controls of
+          a cosmic ship that navigates in the space of sound through sonic
+          constellations and galaxies that before could only glimpse as a
+          distant dream. He now can explore them easily, sitting on a sofa.”
+        </p>
+        <footer>
+          — Iannis Xenakis<sup class="popover-container"
+            >*
+            <div class="popover-content">
+              <strong>Iannis Xenakis</strong>,
+              <em>Formalized Music: Thought and Mathematics in Composition</em>
+              (Hillsdale, N.Y: Pendragon Press, 1992). 150.
+            </div>
+          </sup>
+        </footer>
+      </blockquote>
+      <p>
+        Eventually and over time, computers came to be seen as a valuable tool
+        that could contribute to the advancement of musical form and expression
+        and more composers accepted them as a valid means for composing, even
+        when this involved significant degrees of automation and little or no
+        direct human intervention in the process.
+      </p>
+      <h4>Musical search spaces</h4>
+      <p>
+        In Western art music, especially, several composers have referred to
+        composing as a process of exploration of a
+        <em>musical search space.</em> For example, the notion of
+        <em>basic space,</em> proposed by Fred Lerdahl,<span
+          class="popover-container"
+          >*
+          <span class="popover-content">
+            <strong>F. Lerdahl</strong>,
+            <em
+              >Composition and Cognition: Reflections on Contemporary Music and
+              the Musical Mind</em
+            >
+            (University of California Press, 2019).
+          </span></span
+        >
+        or the idea of <em>musical search spaces,</em> proposed by Lejaren
+        Hiller<span class="popover-container"
+          >*
+          <span class="popover-content">
+            <strong>Lejaren A. Hiller and Leonard M. Isaacson</strong>,
+            <em
+              >Experimental Music: Composition with an Electronic Computer,</em
+            >
+            (New York: McGraw-Hill Book Company, 1959).
+          </span>
+        </span>
+        even earlier, around the decade of 1950.
+      </p>
+      <blockquote class="juan">
+        <strong>
+          <p>
+            This poses interesting questions: Can we understand the process of
+            composing as a structured exploration within a musical search space?
+            If so, what does this exploration involve, and what kinds of choices
+            define this process? Is the search space shaped by pre-existing
+            cultural and stylistic conventions, or does it remain open-ended,
+            shaped solely by the composer’s intuition and formal innovations?
+            Additionally, how do constraints, such as rules of rhythmic,
+            melodic, or harmonic movement, and even instrumental/vocal
+            limitations, among others, impact the scope and boundaries of the
+            search space, and to what extent do they direct the composer’s
+            exploration of it?
+          </p>
+        </strong>
+      </blockquote>
+      <h5>Constraint algorithms</h5>
+      <p>
+        A constraint algorithm is a computational method that searches for
+        values for a set of variables that satisfy a set of constraints,
+        ensuring that all conditions or rules are met. In the field of music
+        composition, particularly in computer-assisted composition, constraint
+        algorithms have a very long history.
+      </p>
+      <p>
+        The primary components of a constraint satisfaction algorithm in music
+        composition include:
+      </p>
+      <ul>
+        <li>
+          <strong>Variables:</strong> These are the elements that need to be
+          assigned a value. In its application to music composition, for
+          example, each variable could be a specific note in a melody.
+        </li>
+        <li>
+          <strong>Domains:</strong> Each variable has a domain, which is the set
+          of possible values that the variable can take. If we take melody, for
+          instance, the domain for melodic variables could be constrained by
+          certain notes, depending on the melodic or harmonic context at
+          different points in time.
+        </li>
+        <li>
+          <strong>Constraints:</strong> These are rules that restrict the values
+          the variables can take. If we think of a melody, then we might want to
+          allow/prevent certain notes from following others or to prohibit
+          certain notes in certain moments of the melody, for example, at the
+          beginning, end, strong or weak beats, or only allow for specific
+          pitches considering the range of the instrument, etc.
+        </li>
+      </ul>
+      <p>
+        The way that constraint algorithms work is rather simple. One determines
+        the variables and their domains –consisting of a set of musical elements
+        that those variables can take– and rules for a particular musical
+        organization for these elements, and the algorithm sorts the musical
+        elements by enforcing this rule or set of rules by iterating through
+        every possible combination of elements until it finds a solution or
+        multiple solutions, or until it finds none. The rules are usually
+        expressed as logical statements, and each candidate solution will be
+        evaluated as true or false. Those evaluated as true are accepted and
+        returned to the user, and those evaluated as false are rejected.
+      </p>
+      <div class="image-container">
+        <img
+          src="./images/ch_4_fig_2.png"
+          style="width: 70%"
+          class="center-image"
+          alt="Constraint algorithms"
+        />
+        <div class="caption">
+          A simple example of how a constraint satisfaction algorithm works.
+          Here, the variables are five consecutive melodic notes. The domain is
+          a set of 12 notes (here expressed as pitch class + octave). Each
+          variable can take one of those 12 values. two rules are defined; the
+          first one states that the first note should be C4, and the second rule
+          states that each note should be higher than its predecessor. The
+          solutions that satisfy these rules are several. The engine thus might
+          return as many as desired –maybe only one- or as many as exist.
+        </div>
+      </div>
+      <p>
+        It is also possible to weigh certain choices of the algorithm instead of
+        ruling them out. For this, other types of rules are more flexible, known
+        as <em>heuristic</em> rules. Heuristic rules allow for solutions that do
+        not totally fulfill the rule. Instead, each candidate solution is
+        assigned a weight expressed as a numeric value. The higher the weight,
+        the better the candidate solution fulfills the rule. Heuristic rules are
+        generally used for musical parameters that allow for certain
+        flexibility. As an example, consider a melodic profile: it is determined
+        by an overall contour, but the notes are not necessarily fixed, and
+        several options are possible for each variable as long as the contour
+        remains.<span class="popover-container"
+          >*
+          <span class="popover-content">
+            A CAC library focused on profiles is JBS-profiles, developed by
+            Jacopo Baboni-Schillingi. Its documentation is available at:
+            <a
+              href="http://baboni-schilingi.com/images/Reseacrh-files/jbs-profile.pdf"
+              target="_blank"
+              >http://baboni-schilingi.com/images/Reseacrh-files/jbs-profile.pdf</a
+            >
+            Additionally, the Max external package CAGE includes functions for
+            compositional operations with profiles. Max, a musical programming
+            language in a patching environment, can be accessed at
+            <a href="https://cycling74.com/" target="_blank"
+              >https://cycling74.com/</a
+            >. CAGE can be downloaded directly from the Max package manager or
+            from
+            <a href="https://bachproject.net/" target="_blank"
+              >https://bachproject.net/</a
+            >. Throughout this project, I have used both tools in different
+            situations, but their functionalities are almost analogous.
+          </span>
+        </span>
+      </p>
+      <div class="image-container">
+        <img
+          src="./images/ch_4_fig_3.png"
+          style="width: 100%"
+          class="center-image"
+          alt="Heuristic Rule"
+        />
+        <div class="caption">
+          Example of a melodic contour used as a heuristic rule. Here, a given
+          profile is applied as a heuristic rule, and two chained
+          <em>true-false</em> rules (the technical term is
+          <em>deterministic</em>) determine allowed intervals and
+          repetitions.<span class="popover-container"
+            >*<span class="popover-content"
+              >Source: <strong>Örjan Sandred,</strong>
+              <em>The musical fundamentals of computer assisted composition</em>
+              (Winnipeg MB: Audiospective Media, 2017).</span
+            ></span
+          >
+        </div>
+      </div>
+      <h5>Cluster-Engine</h5>
+      <p>
+        So far, my description around constraint algorithms seems to paint them
+        as a brute-force tool closer to a calculator than anything musical.
+        However, that is not the whole story. Some constraint algorithms are
+        quite advanced in their architecture and designed to resemble closely
+        the musical compositional situation. An example of this is the
+        constraint solver Cluster-Engine (CE).<span class="popover-container"
+          >*
+          <span class="popover-content">
+            Cluster-Engine was developed by Örjan Sandred. See
+            <strong>Örjan Sandred</strong>, "Constraint-Solving Systems in Music
+            Creation," in
+            <em>
+              Handbook of Artificial Intelligence for Music: Foundations,
+              Advanced Approaches, and Developments for Creativity,
+            </em>
+            ed. Eduardo Reck Miranda, 1st Edition 2021 ed. (Springer
+            International Publishing AG, 2021).
+          </span>
+        </span>
+      </p>
+      <p>
+        CE is a Lisp-based constraint solver designed to address complex musical
+        problems by integrating rhythm, pitch, and meter across multiple voices
+        within a unified sequential search process. Initially developed as a
+        library for the composition environment PWGL, CE has since been ported
+        to Max<span class="popover-container"
+          >*
+          <span class="popover-content">
+            Max 8 is a musical programming language in the form of a patching
+            environment. It is available at
+            <a href="https://cycling74.com" target="_blank"
+              >https://cycling74.com</a
+            >
+          </span>
+        </span>
+
+        and is now distributed as part of the external package MOZ’Lib.<span
+          class="popover-container"
+          >*
+          <span class="popover-content">
+            <a href="https://github.com/JulienVincenot/MOZLib" target="_blank"
+              >https://github.com/JulienVincenot/MOZLib</a
+            >
+          </span>
+        </span>
+        A key feature of MOZ’Lib is its ability to execute Lisp code directly
+        within the Max environment, facilitating the use of CE and other
+        Lisp-based functionalities in Max.<span class="popover-container"
+          >*
+          <span class="popover-content">
+            <strong>Julien Vincenot</strong>, "LISP in Max: Exploratory
+            Computer-Aided Composition in Real-Time,"
+            <em>ICMC 2017 proceedings</em> (Shanghai, 2017),
+            <a
+              href="http://hdl.handle.net/2027/spo.bbp2372.2017.012"
+              target="_blank"
+              >http://hdl.handle.net/2027/spo.bbp2372.2017.012</a
+            >.
+          </span>
+        </span>
+      </p>
+      <p>
+        CE enables the codification of musical rules allowing for reciprocal
+        influence of harmony, rhythm, beat structure, or melodic movement across
+        multiple voices. It supports the use of domains encompassing individual
+        pitches or groups (melodic motifs), intervals or interval groups
+        (intervallic motifs), and individual durations or groups (rhythmic
+        motifs). CE represents each musical voice using two distinct sequences:
+        one for durations and another for pitches. For a two-voice score, this
+        results in four sequences. Additionally, a global sequence is used to
+        represent metric structure (time signature and subdivision). As a
+        result, solving constraints for two voices would require five engines in
+        total.
+      </p>
+      <p>
+        Unlike traditional constraint systems, CE splits a problem among various
+        search engines working in parallel, sharing partial solutions.
+        Additionally, they have the capacity to prompt one another to backtrack
+        during the search process. The advantages of dividing the problem across
+        multiple engines become apparent when logical conflicts arise, and
+        backtracking becomes necessary. CE can identify which variable caused a
+        given conflict, enabling a direct backjump to that position to bypass
+        intermediate steps. While respecting the variable visitation order,
+        backtracking can occur within any independent sequence, leaving others
+        undisturbed. This significant improves the process’ efficiency.
+      </p>
+      <div class="image-container">
+        <img
+          src="./images/ch_4_fig_4.png"
+          alt="Backtracking in Cluster-Engine"
+        />
+        <div class="caption">
+          a) Example of CE’s normal search process; b) Example of the sequential
+          backtracking method used in other constraint solvers. In the event of
+          a conflict between two variables in a two-voice musical scenario
+          (e.g., variables 3 and 11 in the rhythm sequence for voice 2), all
+          intermediate values are erased; c) CE’s backtracking method employs
+          backjumping, which directly targets the source of the conflict. Once
+          variable 3 is reassigned, only variable 7 requires recalculation.<span
+            class="popover-container"
+            >*<span class="popover-content"
+              ><strong>Sandred</strong>, "Constraint-Solving Systems in Music
+              Creation." (2021)</span
+            ></span
+          >
+        </div>
+      </div>
+      <p>
+        Some relevant contemporary composers that use constraint algorithms for
+        composing are Mikael Laurson, Jacopo Baboni Schillingi,<span
+          class="popover-container"
+          >*
+          <span class="popover-content">
+            <strong>J. B. Schillingi</strong> is the creator of the CAC library
+            JBSconstraints, an integral approach for applying constraints in
+            music composition in different musical domains, such as pitch,
+            intervals, distance, structure, etc.
+          </span>
+        </span>
+        Magnus Lindberg,<span class="popover-container"
+          >*
+          <span class="popover-content">
+            A relevant musical composition that resonates with me is
+            <em>Engine</em> (1996) by <strong>Magnus Lindberg.</strong> The
+            title is inspired by the computational realm, specifically tied to
+            the use of the PatchWork environment and its constraint engines
+            (PWConstraints). In this context, the engine functions as a
+            generative mechanism for musical material, operating under a set of
+            predefined rules determined by the composer.
+          </span>
+        </span>
+        Johannes Kretz,<span class="popover-container"
+          >*
+          <span class="popover-content">
+            <strong>Johannes Kretz</strong> has composed several pieces using
+            constraint algorithms, for example, the piece
+            <em>‘Second Horizon’</em> for piano and orchestra. For a description
+            of the compositional process, see <strong>Johannes Kretz</strong>,
+            "Navigation of structured material in second horizon for piano and
+            orchestra," <em>The OM composer’s book 1</em> (2006).
+          </span>
+        </span>
+        Julien Vincenot, and Torsten Anders,<span class="popover-container"
+          >*<span class="popover-content">
+            <strong>Torsten Anders</strong> is the creator of the library
+            Cluster-Rules, an extension of the music constraint solver
+            Cluster-Engine The source code can be found here:
+            <a href="https://github.com/tanders/cluster-rules" target="_blank"
+              >https://github.com/tanders/cluster-rules</a
+            >.
+          </span>
+        </span>
+        among others. Many great musical pieces have been composed relying on
+        this methodology.<span class="popover-container"
+          >*
+          <span class="popover-content">
+            For a detailed survey, see
+            <strong>Torsten Anders, </strong>"Compositions Created with
+            Constraint Programming," in
+            <em>The Oxford Handbook of Algorithmic Music,</em> ed. Roger T. Dean
+            and Alex McLean (Oxford University Press, 2018).
+          </span>
+        </span>
+      </p>
+      <p>
+        An example of the compositional use of constraint algorithms is the
+        piece <em>Memorie de l’eau</em> (2015) by Julien Vincenot. In it, the
+        musical material consists of virtuosic passages inspired mainly by
+        improvisation in free jazz. To generate the musical material, the
+        composer determined a complex search space that comprised transposable
+        melodic motifs and chords, considering the efficient and idiomatic
+        possibilities for the accordion. To generate musical structures using
+        that search space, the composer applied two categories of rules
+        involving the use of two voices (one for each manual of the accordion).
+        The first category is related to idiomatic performance. Here is an
+        example of some rules employed for this purpose:
+      </p>
+      <ul>
+        <li>Restrict the allowed register for each hand.</li>
+        <li>Avoid local repetitions as much as possible (heuristic rule).</li>
+        <li>
+          For rhythmic values faster than an eighth note, allow the pitch engine
+          only to select a chord if it is repeated one or two times with an
+          identical rhythm (the equivalent of a “bellows shake” for the
+          accordion); otherwise, choose a single note.
+        </li>
+      </ul>
+
+      <p>
+        The second set of rules is dedicated mostly to rhythm and controls some
+        aspects of the pitch engines relative to the rhythmic context. As an
+        example:
+      </p>
+
+      <ul>
+        <li>Forbid consecutive silences.</li>
+        <li>Forbid the nth consecutive thirty-second note.</li>
+        <li>
+          Force rhythmic hierarchy between voices (the right hand must follow
+          the left hand’s basic grid and add details on top of it).
+        </li>
+        <li>
+          In some contexts, if the current rhythmic value of the right hand is
+          slower than a sixteenth note, then force the corresponding pitch
+          engine to choose a chord.
+        </li>
+      </ul>
+
+      <div class="image-container">
+        <img src="./images/ch_4_fig_4b.png" alt="Memoire de l’eau" />
+        <div class="caption">
+          Excerpt from the introduction to <em>Memoire de l’eau</em> (2015) for
+          accordion and live electronics.<span class="popover-container"
+            >*
+            <span class="popover-content">
+              For a complete description of the piece and the composer’s
+              methodology see
+              <strong>Julien Vincenot</strong>, "On 'slow' computer-aided
+              composition," in <em>OpenMusic Composer's Book Vol. 3,</em>
+              Éditions Delatour - IRCAM Centre Pompidou (2016).
+            </span>
+          </span>
+        </div>
+      </div>
+      <hr />
+      <div>
+        <div class="buttons-container">
+          <a href="ch3_3.html" class="fancy-button">Previous</a>
+          <a href="table_of_contents.html" class="fancy-button"
+            >Back to Index</a
+          >
+          <a href="ch4_2.html" class="fancy-button">Next</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

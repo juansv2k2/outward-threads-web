@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outward Threads</title>
+    <link rel="stylesheet" href="./chapter.css" />
+  </head>
+  <body class="home">
+    <div class="mainText">
+      <h2>Joining the Threads</h2>
+      <hr />
+      <h3>Sonification</h3>
+
+      <blockquote class="juan">
+        <strong>
+          <p>
+            There has always been an inquiry and curiosity among composers about
+            how the world can be translated into sound. In a way, much of what
+            constitutes the world is already sounding. Therefore, there is no
+            need to translate—only to listen. But how does something that is
+            non-sounding become sound?
+          </p>
+        </strong>
+      </blockquote>
+
+      <p>
+        The process of translating something non-sonic into sound is known as
+        <em>sonification</em>.<span class="popover-container"
+          >*<span class="popover-content"
+            >Technically, sonification is defined as a transformation of data
+            relations into perceived relations in an acoustic signal for the
+            purposes of facilitating communication or interpretation. In
+            <strong> Gregory Kramer et al., </strong>"Sonification Report:
+            Status of the Field and Research Agenda,"
+            <em
+              >Faculty Publications, Department of Psychology, University of
+              Nebraska-Lincoln 444 </em
+            >(2010),
+            <a href="https://digitalcommons.unl.edu/psychfacpub/444."
+              >https://digitalcommons.unl.edu/psychfacpub/444.</a
+            >
+          </span></span
+        >
+        sonification aims essentially to translate some information into sound,
+        at the same time as maintaining comprehensible quantitative
+        relationships that are present in this sonified information in the
+        sounding result.
+      </p>
+      <p>
+        In my practice, sometimes, sonification embodies a symbolic
+        representation of sound in the form of conventional musical notation. I
+        understand this process as one of <em>symbolic sonification,</em> and I
+        will explain this concept in more detail later. Other times, I am
+        interested in a direct mapping process between a source and its sonified
+        result as an audio signal. This is what is usually done as a direct –and
+        somewhat conventional– process of <em>audification</em>.<span
+          class="popover-container"
+          >*<span class="popover-content"
+            ><strong>Bruce N Walker and Michael A Nees, </strong>"Theory of
+            sonification," in <em>The sonification handbook,</em> ed. Thomas
+            Hermann, Andy Hunt, and John G. Neuhoff (Logos Publishing House,
+            2011).</span
+          ></span
+        >
+        I will also discuss an example of this later on.
+      </p>
+
+      <h4>Symbolic sonification</h4>
+
+      <p>
+        I use the term symbolic sonification<span class="popover-container"
+          >*<span class="popover-content"
+            >I came up with this term as a creation of my own. However, I
+            recently found a previous article that employs the term in a similar
+            way, by implementing symbolic sonification of L-systems. See
+            <strong> Adam James Wilson, </strong> "A Symbolic Sonification of
+            L-Systems," <em> CUNY Academic Works </em> (2009).</span
+          ></span
+        >
+        as a process that represents changes in certain sonic dimensions as
+        changes in a musical symbolic dimension. The word symbolic refers to the
+        outcome of the process as symbolic musical information in the form of a
+        score, but also symbolic in the sense that the source of the
+        sonification is not overtly perceived in the outcome of the process.
+        Symbolic sonification is a method that yields some musical
+        representation, but the connection between the source and the outcome is
+        not necessarily perceptually relatable.
+      </p>
+
+      <p>
+        For symbolic sonification to exist, certain musical parameters –the
+        conventional ones are pitch, duration, and dynamics, but others can also
+        be proposed– must be formalized as a numeric representation (such as
+        MIDI cents, velocity, milliseconds, or other numeric values), and the
+        sonified data must be constrained or scaled such that a direct mapping
+        into one another is feasible.
+      </p>
+      <p>
+        Along with the evolution of Western music, there are many historical
+        examples of symbolic sonification. However, it is the symbolic
+        sonification of acoustic information, at some point, became interesting
+        to me. Initially, this process was defined as
+        <em>instrumental resynthesis</em>.<span class="popover-container"
+          >*<span class="popover-content"
+            >For an in-depth discussion of the concept of instrumental
+            resynthesis, see <strong>Joshua Fineberg, </strong>"Guide to the
+            basic concepts and techniques of spectral music,"
+            <em>Contemporary Music Review</em> 19, no. 2 (2000),
+            <a href="https://doi.org/10.1080/07494460000640271" target="_blank"
+              >https://doi.org/10.1080/07494460000640271</a
+            >, and <strong>James O'Callaghan, </strong>"Mimetic Instrumental
+            Resynthesis," <em>Organised Sound</em> 20, no. 2 (2015),
+            <a href="https://doi.org/10.1017/S1355771815000114" target="_blank"
+              >https://doi.org/10.1017/S1355771815000114</a
+            ></span
+          ></span
+        >
+        and was extensively developed by the French spectralist school around
+        the 1970s. Instrumental resynthesis became possible with the advent of
+        the spectrogram.<span class="popover-container"
+          >*<span class="popover-content"
+            >A <em>spectrogram</em> is a visual representation of the spectrum
+            of frequencies in a sound signal as they vary with time.</span
+          ></span
+        >
+        This new tool allowed for the detailed visual observation of the dynamic
+        evolution of the spectral components of sound –in addition to its known
+        abstract quantities and magnitudes.
+      </p>
+      <p>
+        This inspired some composers to replicate these processes using acoustic
+        instruments, creating a form of additive synthesis that mirrors actual
+        sound partials. The goal was for these partials to merge perceptually
+        into a unified sound, forming a complex harmonic structure. Instrumental
+        resynthesis, therefore, aimed at achieving a fusion between harmony and
+        timbre, with one of the primary goals of spectralist composers being the
+        exploration of all forms of fusion and the thresholds that define them.
+      </p>
+
+      <p>
+        The most iconic example of instrumental resynthesis is the opening bars
+        of Gerard Grisey’s <em>Partiels</em> for 18 Musicians (1975), where the
+        spectrum of a trombone sound is recreated by the instruments of the
+        ensemble playing its partials. The result is not the physical recreation
+        of the sound of a trombone but a sounding metaphor of it.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_2.jpg"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Spectral analysis of a trombone sound.<span class="popover-container"
+            >*<span class="popover-content"
+              >Source: <strong>Robert Hasegawa, </strong>"Gérard Grisey and the
+              'nature' of harmony," <em>Music Analysis</em> 28, no. 2-3 (2009),
+              <a
+                href="https://doi.org/10.1111/j.1468-2249.2011.00294.x"
+                target="_blank"
+                >https://doi.org/10.1111/j.1468-2249.2011.00294.x</a
+              >.</span
+            ></span
+          >
+        </div>
+      </div>
+
+      <br />
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_3.jpg"
+          style="width: 100%"
+          class="center-image"
+          alt="Partiels by Gerard Grisey"
+        />
+        <div class="caption">
+          Opening bars of the work <em>Partiels</em> by Gérard Grisey, where the
+          harmonic spectrum of an E<sub>0</sub> sound from a trombone is
+          resynthesized by the ensemble, each instrument representing a
+          partial.<span class="popover-container"
+            >*<span class="popover-content"
+              ><strong>Grisey, Gérard</strong> "Partiels pour 18 Musiciens,"
+              (Ricordi, 1978).
+            </span></span
+          >
+        </div>
+      </div>
+
+      <p>
+        An example of symbolic sonification closely tied to the concept of
+        instrumental resynthesis of acoustic sounds in my work is found in the
+        piece <em>Oscillations (iii).</em> In this piece, the piano chords serve
+        as an instrumental resynthesis of the harmonic spectrum of a bell-like
+        sound produced by a prepared C<sub>2</sub> note on the same piano. The
+        preparation is relatively simple, achieved by placing two magnets near
+        the tuning pegs. Since the bell-like sound reappears throughout the
+        piece, the chords may be perceptually connected to it. However, upon
+        listening, this connection does not stand out or become perceptually
+        apparent –especially if the listener is unaware of it beforehand. This
+        process is shown in the image below. The rhythmic part has been slightly
+        modified “by hand” from the original quantization.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_4.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Spectrogram of a bell-like sound from a prepared C<sub>2</sub> in the
+          grand piano.
+        </div>
+      </div>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_5.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Instrumental resynthesis of the bell-like sound (first note in the
+          sequence).
+        </div>
+      </div>
+
+      <p>
+        Another similar example is also found in
+        <em>Oscillations (iii).</em> In this case, the accordion part is the
+        symbolic sonification of the sound produced by rubbing a superball
+        beneath the piano’s soundboard. As with the previous example, while the
+        accordion and the rubbed piano sound simultaneously, it is challenging
+        to perceptually link the two elements. Instead, the combined sound
+        complex functions metaphorically, although some harmonic or timbral
+        fusion takes place.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_6.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Spectrogram of the sound of rubbing a superball under the harmonic
+          board of a grand piano.
+        </div>
+      </div>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_7.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Instrumental resynthesis of the harmonic spectrum of a superball
+          rubbing the harmonic board of the piano in the accordion part.
+        </div>
+      </div>
+      <p>
+        Not limited to the resynthesis of acoustic spectrums, the French
+        spectralists investigated the possibility of instrumentally
+        resynthesizing artificial sound spectrums, as well as the development of
+        more advanced techniques of synthesis and digital signal processing. For
+        example, spectrums that resulted from different types of modulation of
+        signals, such as frequency modulation (FM)<span
+          class="popover-container"
+          >*<span class="popover-content"
+            >Frequency Modulation synthesis (FM) is a method of sound synthesis
+            in which the frequency of a waveform is modulated by another signal.
+            FM synthesis can produce both harmonic and inharmonic sounds.
+            Harmonic sounds arise when the modulator is harmonically related to
+            the carrier, while inharmonic, bell-like, or percussive tones are
+            created using modulators with non-integer frequency ratios. A
+            modulation index can be adjusted to add more complexity to the
+            sound. Complex FM spectrums have a bell-like quality.</span
+          >
+        </span>
+        or ring modulation (RM).<span class="popover-container"
+          >*<span class="popover-content"
+            >Ring Modulation synthesis (RM) is a type of signal processing
+            function resulting in an output signal generated usually from the
+            combination of two signals: a carrier signal and a modulator signal.
+            The outcome of the ring modulation process is an output signal
+            constituting the sum and the subtraction of those two signals. These
+            output frequencies are called <em>sidebands.</em></span
+          ></span
+        >
+      </p>
+
+      <p>
+        Some composers had already used signal modulations in the past primarily
+        as a method to process and alter the timbre of acoustic instrumental
+        sounds. For example, Karlheinz Stockhausen employed two ring modulator
+        devices in his piece <em>Mantra</em> for two pianos and percussion
+        (1970). The sounds of each piano are ring-modulated with a different
+        sine tone at each section of the thirteen large segments of the
+        composition. The pianists use knobs to re-tune these devices at the
+        beginning of each section. The modulated sound is then projected through
+        loudspeakers positioned behind and above the performers.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_8.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          The 12 target frequencies (as notes) for the ring modulator devices in
+          the piece <em>Mantra.</em> Above for Piano 1 and below for Piano 2.
+          Frequency no. 13 is identical to frequency no. 1.
+        </div>
+      </div>
+
+      <p>
+        The new approach by the French Spectralists was to resynthesize these
+        signal modulation processes in the symbolic domain of musical pitches.
+        The most influential example of this work for me is the piece
+        <em>Gondwana</em> (1980) by Tristan Murail. In it, Murail sought to
+        evoke large bell-like sonorities in the orchestra, employing FM. For
+        this, three values are necessary: the carrier and the modulator, whose
+        frequencies interact to produce a spectrum, and a modulation index. The
+        process is described by the following formula where c is the carrier, m
+        is the modulator, and I is the modulation index:
+      </p>
+
+      <div class="math-equation">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <mi>f</mi>
+          <mo>=</mo>
+          <mi>c</mi>
+          <mo>+</mo>
+          <mi>I</mi>
+          <mo>&#x22C5;</mo>
+          <mi>m</mi>
+        </math>
+      </div>
+
+      <p>
+        Below, it can be observed how this is applied by Murail in the first
+        orchestral aggregate of <em>Gondwana.</em> The carrier is a G<sub
+          >5</sub
+        >
+        (784 Hz), the modulator is a G#<sub>4</sub> (415.3 Hz; the calculations
+        are realized in hertz and must be transformed from frequencies into
+        musical pitches), and from left to right, it can be seen how the
+        resulting sounds change due to increasing the modulation index:
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_9.jpg"
+          style="width: 75%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Carrier and modulator frequencies, along with the resulting
+          frequencies (interpreted as pitches), for the first orchestral
+          aggregate in <em>Gondwana.</em
+          ><span class="popover-container"
+            >*<span class="popover-content"
+              ><strong>Tristan Murail, </strong>"Villeneuve-lès-Avignon
+              Conferences, Centre Acanthes, 9–11 and 13 July 1992,"
+              <em>Contemporary Music Review</em> 24, no. 2-3 (2005),
+              <a
+                href="https://doi.org/10.1080/07494460500154889"
+                target="_blank"
+                >https://doi.org/10.1080/07494460500154889</a
+              >.</span
+            >
+          </span>
+        </div>
+      </div>
+
+      <p>
+        In <em>Gondwana,</em> Murail organizes a succession of harmonic spectra
+        in order of increasing harmonicity. The consonance or dissonance of the
+        interval between the carrier and modulator directly influences the
+        harmonic or inharmonic nature of the modulation. The piece begins with a
+        highly inharmonic aggregate based on the dissonant interval G#–G,
+        progressing toward greater harmonicity as the carrier-modulator
+        intervals become more consonant.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_10.jpg"
+          style="width: 60%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          (a) Progression of the carriers. (b) Progression of frequency
+          modulation aggregates.<span class="popover-container"
+            >*<span class="popover-content"
+              ><strong>Tristan Murail, </strong>"Villeneuve-lès-Avignon
+              Conferences, Centre Acanthes, 9–11 and 13 July 1992,"
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <p>
+        Despite their visual complexity, these aggregates sound less intricate
+        due to the fusion created by precise frequency relationships,
+        intensities, and timbres. In terms of dynamics, Murail opted for a
+        simplified approach, associating higher modulation indices with weaker
+        intensities rather than modeling FM with complete mathematical fidelity.
+      </p>
+
+      <p>
+        I will discuss my use of symbolic sonification of a modulated spectrum
+        in the piece <em>I am a Strange Loop</em> later in this section. Before
+        that, I need to discuss another form of symbolic sonification, in which
+        I became very interested at some point in my compositional journey: the
+        musical reconstruction of speech sounds.
+      </p>
+
+      <p>
+        Several composers have done this throughout the history of WACM. For
+        example, David Evan<span class="popover-container"
+          >*<span class="popover-content"
+            ><strong>David Evan,</strong> "Compositional Control of Phonetic /
+            Nonphonetic Perception," <em>Perspectives of New Music</em> 25, no.
+            1 (1987).</span
+          >
+        </span>
+        and Clarence Barlow,<span class="popover-container"
+          >*<span class="popover-content"
+            ><strong>Clarence Barlow, </strong>"On Music Derived from Language"
+            <em
+              >Proceedings of the 3rd International Symposium on Systems
+              Research in the Arts and Humanities,</em
+            >
+            Baden-Baden, Germany (2009).</span
+          ></span
+        >
+        among others. However, one of the most compelling examples of this
+        approach is Jonathan Harvey’s <em>Speakings</em> for Orchestra and
+        Electronics (2007). In this piece, Harvey explores the instrumental
+        production of speech-like aspects of sounds in a non-linguistic context,
+        using spectral information from speech to create a voice-like quality in
+        instrumental timbre and harmony, evoking associations with the human
+        voice. To achieve this, he employs two primary processes: one based on
+        instrumental additive synthesis or instrumental resynthesis and another
+        involving digital signal processing of the orchestral instruments, using
+        resonating filters to shape their spectrum to resemble speech sounds.
+      </p>
+
+      <p>
+        Concerning the first process, in the first section of
+        <em>Speakings,</em>
+        Harvey orchestrates the sound of a baby’s scream (labeled as “baby
+        scream” in the last bar of p. 6 in the score). By analyzing the
+        frequency and amplitude data of an audio sample of a baby scream, he
+        assigns these frequencies and relative amplitudes to the orchestra,
+        re-creating this spectrum through instrumental additive synthesis.
+        Harvey employs the violins’ higher range in clusters, mimicking formants
+        as frequency bands rather than discrete pitches. The melodic contour of
+        the cluster and the final descending glissando further replicate the
+        timbral morphology of the baby’s scream.<span class="popover-container"
+          >*<span class="popover-content"
+            >For a more detailed analysis of the piece <em>Speakings</em> by J.
+            Harvey see <strong>Gabriel José Bolaños Chamorro, </strong>"An
+            Analysis of Jonathan Harvey’s ‘Speakings’ for Orchestra and
+            Electronics," <em>Ricercare</em> 13, no. 13 (2021),
+            <a
+              href="https://doi.org/10.17230/ricercare.2020.13.4"
+              target="_blank"
+              >https://doi.org/10.17230/ricercare.2020.13.4</a
+            >.</span
+          >
+        </span>
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_11.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Orchestration of a baby’s scream in the piece <em>Speakings.</em
+          ><span class="popover-container"
+            >*<span class="popover-content"
+              ><strong>Jonathan Harvey, </strong>"Speakings: For Large Orchestra
+              and Electronics," (London: Faber Music, 2014), 8.</span
+            >
+          </span>
+        </div>
+      </div>
+
+      <p>
+        An example of the second process can be observed on p. 24 of the score,
+        where the clusters in the piano are processed using a resonant filter
+        that emphasizes or attenuates certain spectral bands in the sound
+        simulating speech formants. This makes the sounds approach timbrally to
+        speech.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_12.png"
+          style="width: 50%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Example of a piano cluster processed with a resonant filter that
+          emphasizes or attenuates certain spectral bands in the sound
+          simulating speech formants.<span class="popover-container"
+            >*<span class="popover-content"
+              ><strong>Jonathan Harvey, </strong>"Speakings: For Large Orchestra
+              and Electronics," 24.</span
+            >
+          </span>
+        </div>
+      </div>
+
+      <p>
+        A more recent approach to this comes from the composer Fabio Cifariello
+        Ciardi, who introduced a framework for resynthesizing the prosodic flow
+        of speech.<span class="popover-container"
+          >*<span class="popover-content"
+            ><strong>Fabio Cifariello Ciardi, </strong>"Strategies and tools for
+            the sonification of prosodic data: A composer's perspective,"
+            <em>
+              Proceedings of the 26th International Conference on Auditory
+              Display (ICAD 2021)
+            </em>
+            (2021),
+            <a
+              href="https://doi.org/https://doi.org/10.21785/icad2021.041"
+              target="_blank"
+              >https://doi.org/https://doi.org/10.21785/icad2021.041</a
+            >.</span
+          ></span
+        >
+        The interesting aspect of Ciardi’s approach is that he is concerned with
+        prosody (i.e., duration, accent, volume, tempo, pitch, and contour
+        variations in the vocal signal) rather than fully complex speech
+        information based on precise formants or specific spectral structures
+        for specific speech sounds. Ciardi’s approach is based on an adaptive
+        strategy of data reduction since, compared to speech, prosodic
+        information has a much lower complexity. The model takes speech raw
+        audio as input and outputs MIDI and MusicXML data, enabling samplers and
+        notation software to both aurally represent and visually display this
+        information.
+      </p>
+
+      <p>
+        This approach has been developed by Ciardi in compositions for solo
+        instruments, ensembles, and orchestras. The design of this system
+        provides the possibility of balancing accuracy in the translation and
+        playability across different instrumental settings. For example, a more
+        precise and complex notation for solo players or a lower-resolution
+        lattice is necessary when scoring for large ensembles or orchestras.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_13.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Excerpt from
+          <em>Piccoli Studi sul Potere - Obama 06_04_2009</em> (2014) for cello
+          and video by F. C. Ciardi.<span class="popover-container"
+            >*<span class="popover-content"
+              >Source: <strong>Fabio Cifariello Ciardi, </strong>"Strategies and
+              tools for the sonification of prosodic data: A composer's
+              perspective,"
+            </span></span
+          >
+        </div>
+      </div>
+
+      <p>
+        An example of a process of symbolic sonification that uses speech sounds
+        as a source can be found in the piece
+        <em>Versificator – Render 3.</em> Here, the sonification consists of a
+        translation of the spectral structure and duration of vocalic phonetic
+        sound into musical pitches and durations, metaphorically embodying the
+        general principle of the Text-To-Speech (TTS) synthesizer. However –and
+        differently from Ciardi’s and Harvey’s approach– the source for the
+        sonification does not come from audio signals. Rather, it comes from a
+        database of normalized formant frequencies and durations for
+        English-spoken vowels.<span class="popover-container"
+          >*<span class="popover-content"
+            >This database can be found in
+            <strong>Hillenbrand et al.,</strong> "Acoustic characteristics of
+            American English vowels."</span
+          >
+        </span>
+        These formant structures translated into musical representation yield
+        several distinctive musical harmonic fields. Potentially, this approach
+        allows for generating fixed harmonic fields in correspondence to each
+        speech sound.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_14.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Symbolic sonification of a set of vocalic sounds. Each vocalic sound
+          serves the purpose of being the source data for the creation of a
+          harmonic field in the piece <em>Versificator – Render 3.</em>
+        </div>
+      </div>
+
+      <p>
+        Another example of symbolic sonification of speech was already discussed
+        in the piece <em>Elevator Pitch</em> for cello and electronics. Here,
+        the musical material comes from sonifying Donald Trump’s spoken phrase,
+        “The time for empty talk is over.” This approach is relatively similar
+        to Harvey’s and Ciardi’s, namely, using an FFT analysis of the sound to
+        identify the most salient spectral cues. In this case, I discarded the
+        information on formants and maintained only the fundamental frequency.
+        This was later translated from an SDIF<span class="popover-container"
+          >*<span class="popover-content"
+            >SDIF, "Sound Description Interchange Format," is a standard for the
+            codification and interchange of a variety of sound descriptions.
+            SDIF was jointly developed by IRCAM and CNMAT.</span
+          >
+        </span>
+        file into a roll-type notation system and later quantized.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_15.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Spectrogram of the fundamental frequency contour of the phrase “the
+          time for empty talk is over,” pronounced by Donald Trump.
+        </div>
+      </div>
+
+      <h4>Audification</h4>
+
+      <p>
+        Artists have explored diverse sources for sonification, using them
+        either as starting points for further compositional refinement or as
+        finished works derived from the direct results of this process. With the
+        advancement of computational processing, large datasets, such as
+        collections of numbers, databases,<span class="popover-container"
+          >*<span class="popover-content"
+            >See for example, Fede Camara Halac’s work on the sonification of
+            databases: <strong>Federico Nicolás Cámara Halac, </strong>"Database
+            Music: A History, Technology, and Aesthetics of the Database in
+            Music Composition" (Ph.D., New York University, 2019).</span
+          ></span
+        >
+        and real-time data streams,<span class="popover-container"
+          >*<span class="popover-content"
+            >See for example the work <em>Sounding Tides,</em> a sonification
+            and visualization of 50 years of data from the Brisbane tides.
+            Created by the composer <strong>Erik Griswold,</strong> the climate
+            social scientist <strong> Rebecca Cunningham, </strong> and the
+            creative coder <strong>Steve Berrick</strong> for
+            <em> Curiocity Brisbane 2022 ,</em> the work takes the form of a
+            kinetic sound installation and an interactive smartphone app. It can
+            be accessed here:
+            <a href="https://www.clockedout.org/soundingtides" target="_blank"
+              >https://www.clockedout.org/soundingtides</a
+            >.</span
+          ></span
+        >
+        can now serve as sources for direct translation into sound or
+        audification.
+      </p>
+
+      <p>
+        During my artistic research position, I had the opportunity to
+        experiment with the audification of brain signals using fNIRS helmets.
+        This was made possible through a collaboration between the Bergen Group
+        on Auditory Perception, led by Dr. Karsten Specht (Faculty of
+        Psychology, UiB), and the project <em>Sounding Philosophy,</em> led by
+        Dr. Dániel Péter Biró (Grieg Academy, KMD, UiB)<span
+          class="popover-container"
+          >*<span class="popover-content"
+            >More on <em>Sounding Philosophy</em> here:
+            <a
+              href="https://www.researchcatalogue.net/view/634973/634974"
+              target="_blank"
+              >https://www.researchcatalogue.net/view/634973/634974</a
+            >.</span
+          >
+        </span>
+        in conjunction with Thomas Hummel at the SWR Experimentalstudio.<span
+          class="popover-container"
+          >*<span class="popover-content"
+            >Visit the SWR Experimental Studio website here:
+            <a
+              href="https://www.swr.de/swrkultur/musik-klassik/experimentalstudio/index.html"
+              target="_blank"
+              >https://www.swr.de/swrkultur/musik-klassik/experimentalstudio/index.html</a
+            >.</span
+          ></span
+        >
+        The use of this highly delicate and expensive equipment for artistic
+        research was facilitated and conducted under the supervision of Dr.
+        Karsten Specht, Professor and Deputy Dean of the Department of
+        Biological and Medical Psychology of the University of Bergen.
+      </p>
+
+      <p>
+        The use of brain signals in sonification or audification processes is
+        not a new concept. Many artists have explored the development of musical
+        systems controlled or modulated by brain activity. Ultimately, these
+        systems serve as a form of sonification of physiological processes, a
+        concept already familiar as <em>biofeedback</em>.<span
+          class="popover-container"
+          >*<span class="popover-content">
+            <strong>Donald Moss,</strong> "Chapter 7 - Biofeedback," in Handbook
+            of Complementary and Alternative Therapies in Mental Health, ed.
+            Scott Shannon (San Diego: Academic Press, 2002).</span
+          ></span
+        >
+        Typically, such systems map brain readings to various acoustic or
+        symbolic representations to manipulate or generate sound. A pioneer in
+        these investigations was David Rosenboom.<span class="popover-container"
+          >*<span class="popover-content"
+            >Rosenboom founded the Experimental Aesthetics Lab at York
+            University in Toronto. The lab attracted a diverse group of artists,
+            including prominent figures like John Cage and LaMonte Young. Some
+            of the early results were documented in
+            <strong>D. Rosenboom,</strong>
+            <em>Biofeedback and the Arts: Results of Early Experiments</em>
+            (Aesthetic Research Centre of Canada, 1976).
+            <a
+              href="https://books.google.no/books?id=NkIXAQAAIAAJ"
+              target="_blank"
+              >https://books.google.no/books?id=NkIXAQAAIAAJ</a
+            >
+            See in addition <strong>David Rosenboom, </strong>"Extended Musical
+            Interface with the Human Nervous System: Assessment and Prospectus,"
+            <em>Leonardo</em> 32, no. 4 (1999),
+            <a href="https://doi.org/10.1162/002409499553398" target="_blank"
+              >https://doi.org/10.1162/002409499553398</a
+            >.</span
+          ></span
+        >
+      </p>
+      <p>
+        In more recent times, the use and development of interfaces to use brain
+        readings for musical purposes has developed quite extensively, as a
+        field known as Brain-Computer Musical Interfaces (BCMI). A notable
+        researcher in this area is Eduardo Reck Miranda.<span
+          class="popover-container"
+          >*<span class="popover-content"
+            >See
+            <strong>Eduardo Reck Miranda and Julien Castet,</strong>
+            <em>Guide to Brain-Computer Music Interfacing,</em> 2014 ed.
+            (London: Springer Nature, 2014). In addition, an important summary
+            of forty years of investigation and experimentation in BCMI has been
+            published in <strong>Andrew Brouse,</strong> "Petit guide de la
+            musique des ondes cérébrales," 2012, accessed May 2, 2024,
+            <a
+              href="https://www.econtact.ca/14_2/brouse_brainwavemusic_fr.html"
+              target="_blank"
+              >https://www.econtact.ca/14_2/brouse_brainwavemusic_fr.html</a
+            >.</span
+          ></span
+        >
+        While the technology required for this type of purpose has become more
+        affordable and portable, several attempts have been made to develop BCMI
+        in diverse fields of musical practice, such as music performance,<span
+          class="popover-container"
+          >*<span class="popover-content"
+            ><strong>S. Venkatesh, E. R. Miranda, and E. Braund, </strong
+            >"SSVEP-based brain-computer interface for music using a low-density
+            EEG system," <em>Assist Technol</em> 35, no. 5 (Sep 3 2023),
+            <a
+              href="https://doi.org/10.1080/10400435.2022.2084182"
+              target="_blank"
+              >https://doi.org/10.1080/10400435.2022.2084182</a
+            >.</span
+          >
+        </span>
+        composition,<span class="popover-container"
+          >*<span class="popover-content"
+            ><strong>Caterina Ceccato et al., </strong>"BrainiBeats: A dual
+            brain-computer interface for musical composition using inter-brain
+            synchrony and emotional valence" (Extended Abstracts of the 2023 CHI
+            Conference on Human Factors in Computing Systems, Hamburg,
+            Association for Computing Machinery, 2023).</span
+          ></span
+        >
+        sound synthesis,<span class="popover-container"
+          >*<span class="popover-content"
+            ><strong>B. Arslan et al., </strong>"A Real Time Music Synthesis
+            Environment Driven with Biological Signals" (paper presented at the
+            2006 IEEE International Conference on Acoustics Speech and Signal
+            Processing, 2006) .</span
+          ></span
+        >
+        and improvisation.<span class="popover-container"
+          >*<span class="popover-content"
+            ><strong>Beste Filiz Yuksel et al., </strong>"BRAAHMS: A Novel
+            Adaptive Musical Interface Based on Users' Cognitive State"
+            (Proceedings of the international conference on New Interfaces for
+            Musical Expression, Baton Rouge, Louisiana, USA, The School of Music
+            and the Center for Computation and Technology (CCT), Louisiana State
+            University, 2015);
+            <strong>Sebastian Mealla et al., </strong>"Listening to Your Brain:
+            Implicit Interaction in Collaborative Music Performances"
+            (Proceedings of the International Conference on New Interfaces for
+            Musical Expression, Oslo, Norway, 2011).</span
+          ></span
+        >
+      </p>
+
+      <p>
+        It is important to distinguish between two different technologies for
+        brain readings, as they may lead to distinct artistic approaches:
+        Functional near-infrared spectroscopy (fNIRS) and Electroencephalography
+        (EEG). fNIRS is a non-invasive tool to continuously assess the
+        oxygenation of localized areas of the brain. fNIRS is comparable to
+        functional magnetic resonance imaging (fMRI). However, fNIRS relies on
+        variances in optical absorption instead of magnetic fields. By utilizing
+        the near-infrared spectrum, fNIRS allows light to pass through
+        biological tissues, where it is absorbed by chromophores like
+        <em>oxyhemoglobin</em> and <em>deoxyhemoglobin</em>.<span
+          class="popover-container"
+          >*<span class="popover-content"
+            ><strong>Hasan Ayaz et al., </strong>"Chapter 3 - The Use of
+            Functional Near-Infrared Spectroscopy in Neuroergonomics," in
+            <em>Neuroergonomics,</em> ed. Hasan Ayaz and Frédéric Dehais
+            (Academic Press, 2019).</span
+          ></span
+        >
+        The key advantage of fNIRS lies in its portability, as it consists only
+        of a helmet connected wirelessly to a signal amplifier and its capacity
+        for monitoring natural-life situations, such as a musical
+        performance.<span class="popover-container"
+          >*<span class="popover-content"
+            ><strong>Atsumichi Tachibana et al., </strong>"Prefrontal activation
+            related to spontaneous creativity with rock music improvisation: A
+            functional near-infrared spectroscopy study,"
+            <em>Scientific Reports</em> 9, no. 1 (2019),
+            <a href="https://doi.org/10.1038/s41598-019-52348-6"
+              >https://doi.org/10.1038/s41598-019-52348-6</a
+            >
+          </span></span
+        >
+      </p>
+
+      <p>
+        EEG, on the other hand, measures the electrical activity of the brain by
+        detecting voltage fluctuations resulting from ionic current flows within
+        the neurons.<span class="popover-container"
+          >*<span class="popover-content"
+            ><em>
+              Niedermeyer's Electroencephalography: Basic Principles, Clinical
+              Applications, and Related Fields, </em
+            ><strong
+              >ed. Donald L. Schomer and Fernando H. Lopes da Silva</strong
+            >
+            (Oxford University Press, 2017).
+            <a href="https://doi.org/10.1093/med/9780190228484.001.0001."
+              >https://doi.org/10.1093/med/9780190228484.001.0001.</a
+            ></span
+          ></span
+        >
+        EEG offers a higher temporal resolution compared to fNIRS and captures
+        rapid neural dynamics across a broader area of the brain. However, its
+        spatial resolution is relatively low compared to fNIRS, making it more
+        challenging to pinpoint the precise anatomical sources of the signals.
+      </p>
+
+      <p>
+        A classic early example of the use of EEG in a piece of music is
+        <em>Music for a Solo Performer</em> (1965) by Alvin Lucier. In it, the
+        brainwaves of the performer are used to excite percussion instruments.
+        In particular, the sought-after waves are alpha waves, which are
+        associated with relaxation, often experienced during restful or
+        meditative states. For this reason, the performer of this piece is
+        sitting down with his eyes closed during the whole performance. Alpha
+        waves, measured using an EEG, occur between 8 and 12 Hz when an
+        individual is relaxed but awake. The rhythmic nature of these waves
+        makes them ideal for percussive sonification, prompting Lucier and
+        Edmond Dewan –the scientist who collaborated with Lucier for this piece–
+        to map them directly onto percussion sounds.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_17.jpg"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          This image illustrates each wave’s unique pattern and associated
+          states (x-axis indicates time in seconds): Alpha Waves (8–12 Hz):
+          Linked to relaxation and eye closure, originating in the posterior
+          brain regions; includes mu rhythm during idle motor states. Beta Waves
+          (13–30 Hz): Reflect active thinking, motor behavior, or anxiety; can
+          also indicate pathologies or drug effects. Delta Waves (0–4 Hz):
+          High-amplitude, slow waves seen in deep sleep, infants, and certain
+          brain conditions. Gamma Waves (30–100 Hz): Represent neural binding
+          for cognitive or motor functions, often linked to higher brain
+          activity. Theta Waves (4–7 Hz): Associated with young children,
+          drowsiness, meditation, and creative states, but can indicate
+          abnormalities in some cases.<span class="popover-container"
+            >*<span class="popover-content"
+              >Source of the images: Hugo Gambo, CC BY-SA 3.0
+              <a
+                href="http://creativecommons.org/licenses/by-sa/3.0/"
+                target="_blank"
+                >http://creativecommons.org/licenses/by-sa/3.0/</a
+              >, via Wikimedia Commons</span
+            >
+          </span>
+        </div>
+      </div>
+
+      <p>
+        On the one hand, EEG is highly effective for mapping brainwaves with
+        direct sensorimotor stimuli, such as limb movements, with millisecond
+        resolution. Its high temporal efficacy allows researchers to accurately
+        correlate brainwave activity –typically represented as peaks and valleys
+        similar to an audio or a seismic waveform (see image above)– with bodily
+        actions. fNIRS, on the other hand, has a lower temporal resolution,
+        making it less suitable for fast, real-time movements. fNIRS works best
+        at monitoring brain activity over longer periods. Compositionally, this
+        approach is more suited for mapping slower processes that adjust
+        synthesis parameters or gradually transform the sound.
+      </p>
+      <p>
+        This was the method I used with fNIRS, and I will discuss it in more
+        detail very soon. But before diving into that, I need to cover one final
+        compositional process related to the idea of sonification.
+      </p>
+
+      <h3>Parametrical Remapping</h3>
+
+      <blockquote class="juan">
+        <p>
+          <strong
+            >Can preexisting music be <em>sonified?</em> Well, music is already
+            sound, so it doesn’t need to be. But speech is sound, too, and it
+            can indeed be sonified! OK. To be precise, it’s not the speech
+            itself that is sonified, but rather certain abstract structures
+            within the acoustic signal of speech. However, when it comes to
+            music, sonification might not be the right term. Maybe it’s more
+            about translation—translation of music into music, but that doesn’t
+            quite make sense either… MAPPING! How can preexisting musical
+            structures be remapped into fresh, new musical narratives?
+          </strong>
+        </p>
+      </blockquote>
+      <p>
+        The idea of mapping refers to
+        <em>
+          any prescribed way of assigning to each object in one set a particular
+          object in in another set</em
+        >.<span class="popover-container"
+          >*<span class="popover-content"
+            ><strong>Encyclopedia Britannica, </strong
+            ><em>“mapping,”</em> accessed April 20, 2021,
+            <a href="https://www.britannica.com/science/mapping" target="_blank"
+              >https://www.britannica.com/science/mapping</a
+            ></span
+          >
+        </span>
+        Remapping, thus, is defined as mapping again but also as laying out a
+        new pattern. Parametrical remapping embodies a process by which I
+        translate preexisting musical abstract information into constructive
+        parameters of a new musical piece.
+      </p>
+
+      <p>
+        An example of this can be found in my piece
+        <em>Oscillations (i).</em> Here, I use a melodic profile to reconstruct
+        a rhythmic profile and a probabilistic dynamic distribution profile. In
+        this case, the melodic profile is expressed as a break-point function
+        (BPF) and becomes the source of new remappings of this BPF across
+        diverse musical dimensions.
+      </p>
+
+      <div class="image-container">
+        <img
+          src="./images/ch_7_fig_18.png"
+          style="width: 100%"
+          class="center-image"
+          alt="I am a Strange Loop"
+        />
+        <div class="caption">
+          Example of the process of remapping a melodic profile into a duration
+          profile and a probabilistic distribution of dynamics in the piece
+          <em>Oscillations (i).</em>
+        </div>
+      </div>
+
+      <p>
+        However, the aforementioned processes of symbolic sonification,
+        audification, and parametric remapping are central to the creative
+        process of <em>I am a Strange Loop </em>for saxophone quartet and reeds
+        duo, which I will discuss next.
+      </p>
+      <hr />
+
+      <div class="buttons-container">
+        <a href="ch7.html" class="fancy-button">Previous</a>
+        <a href="table_of_contents.html" class="fancy-button">Back to Index</a>
+        <a href="ch7_3.html" class="fancy-button">Next</a>
+      </div>
+    </div>
+  </body>
+</html>
