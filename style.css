@@ -396,10 +396,9 @@ p {
   }
 
   .mainText {
-    top: 9%;
-    max-width: 85%;
-    padding: 2em 2em 2em 2em;
-    padding-bottom: 3.5em;
+    width: 80%; /* Maximize width for very small screens */
+    padding: 1.5em 2em 3em 2em; /* Minimize padding for compact layout */
+    margin: 3%; /* Smaller margin for tighter fit */
   }
 
   .academic_info {

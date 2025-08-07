@@ -167,7 +167,9 @@ hr {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .mainText {
-    padding: 2em 4em; /* Slightly reduce padding */
+    width: 80%; /* Maximize width for very small screens */
+    padding: 1.5em 2em 3em 2em; /* Minimize padding for compact layout */
+    margin: 3%; /* Smaller margin for tighter fit */
   }
 
   .card {
