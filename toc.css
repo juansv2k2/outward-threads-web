@@ -1,30 +1,27 @@
 @charset "UTF-8";
-
 /* Layout */
 
-html,
 body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  overflow-y: auto; /* Allow vertical scrolling without gaps */
+  overflow-y: scroll; /* Allow vertical scrolling without gaps */
   overscroll-behavior: auto;
-}
-
-body {
   margin: 0;
   padding: 0;
   min-height: calc(110% + 4em); /* Base height of .mainText plus 10% */
   display: flex;
   justify-content: center; /* Centers the .mainText vertically */
-  align-items: flex-start; /* Aligns the .mainText from the top */
+  align-items: center; /* Aligns the .mainText from the top */
+
+  background-image: url("./images/background_rest.jpg");
+  background-size: 180%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: black;
 }
 
 body.home {
   font-family: poppins-regular-webfont;
-  background-image: url("./images/background_rest.jpg");
-  background-size: cover;
-  background-position: center;
-  background-clip: padding-box; /* Aplica el fondo solo en los bordes */
-  padding: 5% 15%; /* Ajusta los bordes visibles */
 }
 
 body.table {
@@ -38,12 +35,12 @@ body.table {
 
 .mainText {
   text-align: center;
-  width: 70%;
+  width: 80%;
   padding: 3em 6em 6em 6em;
-  background: rgba(245, 245, 245, 0.97); /* Fondo blanco con opacidad */
+  background: rgba(245, 245, 245, 0.95); /* Fondo blanco con opacidad */
   box-shadow: 5px 4px 5px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra */
   border-radius: 12px; /* Bordes redondeados */
-  margin: 5%;
+  margin: 3% 10% 3% 10%;
 }
 
 .center {
@@ -169,20 +166,7 @@ hr {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
-  body.table {
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
   .mainText {
-    max-width: 90%; /* Constrain width to avoid stretching too much */
     padding: 2em 4em; /* Slightly reduce padding */
   }
 
@@ -244,23 +228,19 @@ hr {
 }
 
 @media (max-width: 767px) {
-  html,
   body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
+    background-image: url("./images/background_rest_2.jpg");
+    background-position: top;
+    background-repeat: repeat;
+    background-size: 160%;
+    background-attachment: fixed;
+    min-height: 100%;
   }
-  body.table {
-    overflow-x: hidden;
-    overflow-y: auto;
 
-    padding-bottom: 7vh;
-  }
   .mainText {
-    max-width: 90%; /* Let it stretch within the margins */
-    padding: 1.5em 2em 5em;
+    width: 85%; /* Maximize width for very small screens */
+    padding: 1em; /* Minimize padding for compact layout */
+    margin: 3% auto;
   }
 
   .card {

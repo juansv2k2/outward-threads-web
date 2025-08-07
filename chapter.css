@@ -1,36 +1,46 @@
 @charset "UTF-8";
 /* Fonts: */
 
-html,
 body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: scroll; /* Allow vertical scrolling without gaps */
+  overscroll-behavior: auto;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  overflow-y: auto; /* Allow vertical scrolling without gaps */
-  overscroll-behavior: auto; /* Prevent bounce or overscroll behavior */
+  min-height: calc(110% + 4em); /* Base height of .mainText plus 10% */
   display: flex;
-  justify-content: center; /* Centers .mainText vertically */
-  background-size: 180%; /* Larger background for emphasis */
-  box-sizing: border-box;
-  background-color: black;
+  justify-content: center; /* Centers the .mainText vertically */
+  align-items: center; /* Aligns the .mainText from the top */
+
   background-image: url("./images/background_rest.jpg");
+  background-size: 180%;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: black;
 }
 
 body.home {
-  font-family: Inter-Regular;
-  background-clip: padding-box; /* Applies background only within padding */
-  padding: 0 5%;
+  font-family: poppins-regular-webfont;
+}
+
+body.table {
+  font-family: poppins-regular-webfont;
+
+  background-image: url("./images/background_rest.jpg");
+  background-clip: padding-box; /* Aplica el fondo solo en los bordes */
+  background-size: 180%;
+  box-sizing: border-box;
 }
 
 .mainText {
   text-align: center;
   width: 80%;
   padding: 3em 6em 6em 6em;
-  background: rgba(245, 245, 245, 0.97); /* Fondo blanco con opacidad */
+  background: rgba(245, 245, 245, 0.95); /* Fondo blanco con opacidad */
   box-shadow: 5px 4px 5px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra */
   border-radius: 12px; /* Bordes redondeados */
-  margin: 5%;
+  margin: 3% 10% 3% 10%;
 }
 
 .container {
@@ -737,10 +747,6 @@ blockquote footer {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  body.home {
-    padding: 0; /* Further reduce side padding for small screens */
-  }
-
   .mainText {
     width: 85%; /* Maximize width for very small screens */
     padding: 1.5em 2em 3em 2em; /* Minimize padding for compact layout */
@@ -823,15 +829,21 @@ blockquote footer {
 }
 
 @media (max-width: 767px) {
-  body.home {
-    padding: 0; /* Further reduce side padding for small screens */
+  body {
+    background-image: url("./images/background_rest_2.jpg");
+    background-position: top;
+    background-repeat: repeat;
+    background-size: 160%;
+    background-attachment: fixed;
+    min-height: 100%;
   }
 
   .mainText {
-    width: 80%; /* Maximize width for very small screens */
+    width: 85%; /* Maximize width for very small screens */
     padding: 1em; /* Minimize padding for compact layout */
-    margin: 5% auto;
+    margin: 3% auto;
   }
+
   p {
     margin-bottom: 1em;
     font-size: 0.9em;

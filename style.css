@@ -146,7 +146,7 @@ p {
   width: 100%;
   max-width: 75%;
   padding: 3em 6em 3em 6em;
-  background: rgba(245, 245, 245, 0.97); /* Fondo blanco con opacidad */
+  background: rgba(245, 245, 245, 0.95); /* Fondo blanco con opacidad */
   box-shadow: 5px 4px 5px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra */
   border-radius: 12px; /* Bordes redondeados */
   padding-bottom: 4em;
@@ -244,27 +244,39 @@ p {
 
 @media (max-width: 767px) {
   body {
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     overflow-y: auto; /* Allow vertical scrolling without gaps */
     overscroll-behavior: auto;
+    position: relative;
   }
 
   body.home {
     font-family: poppins-regular-webfont;
     background-color: black;
     color: #2b2b2b;
-    background-image: url("./images/background_index.jpg");
-    background-clip: padding-box;
     padding: 0; /* Remove padding */
     box-sizing: border-box;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
     align-items: center;
+    min-height: 100vh; /* Ensure full viewport height */
+    position: relative;
   }
+
+  /* Fixed background using pseudo-element for mobile Chrome compatibility */
+  body.home::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/background_index.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    will-change: transform; /* Optimize for mobile performance */
+  }
+
   .card {
     background-color: #fff;
     border: 1px solid #2b2b2b;
