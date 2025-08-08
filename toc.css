@@ -35,7 +35,7 @@ body.table {
 
 .mainText {
   text-align: center;
-  width: 80%;
+  width: 65%;
   padding: 3em 6em 6em 6em;
   background: rgba(245, 245, 245, 0.95); /* Fondo blanco con opacidad */
   box-shadow: 5px 4px 5px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra */
