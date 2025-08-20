@@ -751,7 +751,7 @@ blockquote footer {
   .mainText {
     width: 80%; /* Maximize width for very small screens */
     padding: 1.5em 2em 3em 2em; /* Minimize padding for compact layout */
-    margin: 3%; /* Smaller margin for tighter fit */
+    margin: 3em auto; /* Smaller margin for tighter fit */
   }
   p {
     margin-bottom: 1em;
@@ -1148,6 +1148,13 @@ blockquote footer {
 
   .audio-player-markov {
     width: 80%; /* Optional: limit the maximum width */
+  }
+}
+
+@media (min-width: 1920px) {
+  .mainText {
+    width: 60%;
+    margin: 5em auto;
   }
 }
 

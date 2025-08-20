@@ -40,7 +40,7 @@ body.table {
   background: rgba(245, 245, 245, 0.95); /* Fondo blanco con opacidad */
   box-shadow: 5px 4px 5px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra */
   border-radius: 12px; /* Bordes redondeados */
-  margin: 3% 10% 3% 10%;
+  margin: 3em auto;
 }
 
 .center {
@@ -169,7 +169,7 @@ hr {
   .mainText {
     width: 80%; /* Maximize width for very small screens */
     padding: 1.5em 2em 3em 2em; /* Minimize padding for compact layout */
-    margin: 3%; /* Smaller margin for tighter fit */
+    margin: 3em auto; /* Smaller margin for tighter fit */
   }
 
   .card {
@@ -242,7 +242,7 @@ hr {
   .mainText {
     width: 85%; /* Maximize width for very small screens */
     padding: 1em; /* Minimize padding for compact layout */
-    margin: 3% auto;
+    margin: 3em auto;
   }
 
   .card {
@@ -300,6 +300,13 @@ hr {
       0,
       0.1
     ); /* Slightly darker background on hover */
+  }
+}
+
+@media (min-width: 1920px) {
+  .mainText {
+    width: 55%;
+    margin: 5em auto;
   }
 }
 
